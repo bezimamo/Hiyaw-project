@@ -1,15 +1,15 @@
 import { Hero } from '@/components/home-ui/hero'
-import { Services } from '@/components/home-ui/services'
-import { Clients } from '@/components/home-ui/clients'
-import { Testimonials } from '@/components/home-ui/testimonials'
+import { About } from '@/components/home-ui/about'
+import { Projects } from '@/components/home-ui/projects'
+import { Trainings } from '@/components/home-ui/trainings'
 
 export default function Home() {
   return (
     <main className="pt-16"> {/* Add padding to account for fixed navbar */}
       <Hero />
-      <Services />
-      <Clients />
-      <Testimonials />
+      <About />
+      <Projects />
+      <Trainings />
     </main>
   )
 }
