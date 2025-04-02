@@ -1,68 +1,78 @@
 import Image from 'next/image';
-import { FaPalette, FaUsers, FaTools, FaClock } from 'react-icons/fa'; // Import relevant icons
+import { FaGlobeAfrica, FaUsers, FaLightbulb, FaHandsHelping, FaUniversalAccess } from 'react-icons/fa';
 
 export function AboutHero() {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between py-12 px-6 container mx-auto">
+    <section className="flex flex-col md:flex-row items-center justify-between py-16 px-8 md:px-16 container mx-auto font-['Poppins']">
       {/* Left Side - Text Content */}
-      <div className="md:w-1/2 text-left">
-        <h4 className="text-lg font-extrabold text-[#41423A]">Why Choose Us</h4>
-        <h1 className="text-4xl mt-4 text-[#F05A28]">
+      <div className="md:w-1/2 text-left px-8 md:px-16 mb-8 md:mb-0">
+        <h4 className="text-lg font-extrabold text-[#41423A] mb-2">Why Choose Us</h4>
+        <h1 className="text-4xl md:text-5xl mt-4 text-[#F05A28] font-bold leading-tight">
           Experience the magic of creativity with all our services.
         </h1>
 
         {/* Features List */}
-        <div className="mt-6 space-y-6">
-          <div className="flex items-start space-x-4">
-            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#F05A28]">
-              <FaPalette className="text-white text-2xl" />
+        <div className="mt-10 space-y-8">
+          <div className="flex items-start space-x-8 md:space-x-12">
+            <div className="w-20 h-20 flex items-center justify-center rounded-full bg-[#F05A28]">
+              <FaGlobeAfrica className="text-white text-5xl" />
             </div>
             <div>
-              <h2 className="text-xl font-bold text-[#41423A]">Comprehensive Creative Solutions</h2>
-              <p className="text-lg">Everything you need under one roof.</p>
+              <h3 className="text-xl md:text-2xl font-bold text-[#41423A]">Cultural Authenticity</h3>
+              <p className="text-sm md:text-base">We celebrate Ethiopian stories and heritage.</p>
             </div>
           </div>
 
-          <div className="flex items-start space-x-4">
-            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#F05A28]">
-              <FaUsers className="text-white text-2xl" />
+          <div className="flex items-start space-x-8 md:space-x-12">
+            <div className="w-20 h-20 flex items-center justify-center rounded-full bg-[#F05A28]">
+              <FaUsers className="text-white text-5xl" />
             </div>
             <div>
-              <h2 className="text-xl font-bold text-[#41423A]">A Team of Visionaries</h2>
-              <p className="text-lg">Passionate professionals dedicated to awe-inspiring visuals.</p>
+              <h3 className="text-xl md:text-2xl font-bold text-[#41423A]">Community Empowerment</h3>
+              <p className="text-sm md:text-base">We build a supportive network for collaboration and growth.</p>
             </div>
           </div>
 
-          <div className="flex items-start space-x-4">
-            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#F05A28]">
-              <FaTools className="text-white text-2xl" />
+          <div className="flex items-start space-x-8 md:space-x-12">
+            <div className="w-20 h-20 flex items-center justify-center rounded-full bg-[#F05A28]">
+              <FaLightbulb className="text-white text-5xl" />
             </div>
             <div>
-              <h2 className="text-xl font-bold text-[#41423A]">Tailored to Perfection</h2>
-              <p className="text-lg">Animations customized to your vision and preferences.</p>
+              <h3 className="text-xl md:text-2xl font-bold text-[#41423A]">Artistic Innovation</h3>
+              <p className="text-sm md:text-base">We embrace cutting-edge techniques to push creative boundaries.</p>
             </div>
           </div>
 
-          <div className="flex items-start space-x-4">
-            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#F05A28]">
-              <FaClock className="text-white text-2xl" />
+          <div className="flex items-start space-x-8 md:space-x-12">
+            <div className="w-20 h-20 flex items-center justify-center rounded-full bg-[#F05A28]">
+              <FaHandsHelping className="text-white text-5xl" />
             </div>
             <div>
-              <h2 className="text-xl font-bold text-[#41423A]">Timely Delivery</h2>
-              <p className="text-lg">We ensure top-notch results on schedule.</p>
+              <h3 className="text-xl md:text-2xl font-bold text-[#41423A]">Social Responsibility</h3>
+              <p className="text-sm md:text-base">We inspire positive change through meaningful storytelling.</p>
+            </div>
+          </div>
+
+          <div className="flex items-start space-x-8 md:space-x-12">
+            <div className="w-20 h-20 flex items-center justify-center rounded-full bg-[#F05A28]">
+              <FaUniversalAccess className="text-white text-5xl" />
+            </div>
+            <div>
+              <h3 className="text-xl md:text-2xl font-bold text-[#41423A]">Inclusivity</h3>
+              <p className="text-sm md:text-base">We welcome diverse voices and perspectives.</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Right Side - Animated Image */}
-      <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
+      {/* Right Side - Larger Image */}
+      <div className="md:w-1/2 flex justify-center px-8 md:px-16 mt-8 md:mt-0">
         <Image
-          src="/assets/lalibela.png" // Replace with actual image path
-          alt="Animated Illustration"
-          width={500}
-          height={500}
-          className="rounded-lg shadow-lg"
+          src="/assets/img1.png" // Replace with the correct image path
+          alt="Ethiopian Culture"
+          width={600} // Increased image size
+          height={700} // Increased height for equal alignment with text
+          className="rounded-lg shadow-lg object-cover"
         />
       </div>
     </section>

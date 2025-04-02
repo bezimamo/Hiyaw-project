@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link'; 
 import { ModeToggle } from './mode-toggle';
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -13,22 +13,19 @@ const navItems = [
 
 export function Navbar() {
   return (
-   <nav className="fixed top-4 left-10 right-5 z-50 bg-white shadow-lg rounded-lg border-b px-2 py-2">
-  <div className="container mx-auto flex items-center justify-between">
+    <nav className="fixed top-4 left-10 right-10 z-50 bg-white shadow-lg rounded-lg border-t-2 border-[#F05A28] px-4 py-2">
+      <div className="container mx-auto flex items-center justify-between">
         
         {/* Logo with Animated Text */}
         <Link href="/" className="flex flex-col items-start">
-  <div className="flex items-center space-x-2">
-    <img 
-      src="/assets/MASTER LOGO Y.O.png" 
-      alt="Hiyaw Logo" 
-      className="w-10 h-10"  // Removed rounded-full to keep it as a square
-    />
-    <span className="font-bold text-2xl text-[#41423A]">Hiyaw</span>
-  </div>
-  <span className="text-sm text-[#41423A] animate-pulse">Creative Excellence</span>
-</Link>
-
+          <div className="flex items-center space-x-2">
+            <img 
+              src="/assets/MASTER LOGO Y.O.png" 
+              alt="Hiyaw Logo" 
+              className="w-10 h-10"  
+            />
+          </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
@@ -36,7 +33,7 @@ export function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="relative text-sm font-medium text-[#41423A] hover:text-[#F05A28] transition-colors"
+              className="relative text-sm font-medium text-[#41423A] hover:text-[#F05A28] transition-colors group"
             >
               {item.name}
               <span className="absolute left-1/2 -bottom-2 w-2 h-2 bg-[#F05A28] rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100 transform -translate-x-1/2"></span>
@@ -66,7 +63,7 @@ export function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="relative text-sm font-medium text-[#41423A] hover:text-[#F05A28] transition-colors"
+                  className="relative text-sm font-medium text-[#41423A] hover:text-[#F05A28] transition-colors group"
                 >
                   {item.name}
                   <span className="absolute left-1/2 -bottom-2 w-2 h-2 bg-[#F05A28] rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100 transform -translate-x-1/2"></span>

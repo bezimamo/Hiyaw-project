@@ -1,68 +1,89 @@
-"use client"
+"use client";
 
-import { useState } from 'react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { ArrowUpRight } from 'lucide-react'
+import Image from "next/image";
+import { motion } from "framer-motion";
 
-const infoCards = [
+const infoBlocks = [
   {
     title: "Our Mission",
-    description: "To empower businesses through innovative technology solutions.",
-    content: "We strive to create cutting-edge software that solves real-world problems and drives digital transformation across industries. Our mission is to make complex technologies accessible and user-friendly, enabling businesses of all sizes to thrive in the digital age."
+    description: "Empowering businesses through innovative technology solutions.",
+    content:
+      "We create cutting-edge software that drives digital transformation and makes complex technologies accessible to all businesses.",
+    image: "/assets/img2.png",
   },
   {
     title: "Our Values",
-    description: "Integrity, Innovation, Collaboration, and Excellence.",
-    content: "Integrity: We uphold the highest ethical standards in all our dealings. Innovation: We constantly push the boundaries of what's possible. Collaboration: We believe in the power of teamwork and partnerships. Excellence: We are committed to delivering the best in everything we do."
+    description: "Integrity, Innovation, Collaboration, Excellence.",
+    content:
+      "Integrity: Upholding the highest ethical standards. Innovation: Pushing boundaries. Collaboration: Harnessing teamwork. Excellence: Delivering the best.",
+    image: "/assets/img4.png",
   },
   {
     title: "Our Vision",
     description: "To be the global leader in transformative tech solutions.",
-    content: "We envision a future where our technology solutions are at the forefront of global innovation, driving positive change across industries and improving lives worldwide. We aim to be the go-to partner for businesses seeking to leverage technology for growth and success."
-  }
-]
+    content:
+      "We aim to be the go-to partner for businesses leveraging technology for growth, leading global innovation and positive change.",
+    image: "/assets/img3.jpeg",
+  },
+];
 
 export function CompanyInfo() {
-  const [openDialog, setOpenDialog] = useState<string | null>(null)
-
   return (
-    <section className="py-24 bg-background">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Who We Are</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {infoCards.map((card, index) => (
-            <Card key={index} className="flex flex-col">
-              <CardHeader>
-                <CardTitle>{card.title}</CardTitle>
-                <CardDescription>{card.description}</CardDescription>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <p className="text-muted-foreground">{card.content.slice(0, 100)}...</p>
-              </CardContent>
-              <div className="p-6 pt-0">
-                <Dialog open={openDialog === card.title} onOpenChange={(open) => setOpenDialog(open ? card.title : null)}>
-                  <DialogTrigger asChild>
-                    <Button variant="outline" className="w-full group">
-                      Read More
-                      <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent className="sm:max-w-[425px]">
-                    <DialogHeader>
-                      <DialogTitle>{card.title}</DialogTitle>
-                    </DialogHeader>
-                    <div className="mt-6 text-muted-foreground">
-                      <p>{card.content}</p>
-                    </div>
-                  </DialogContent>
-                </Dialog>
-              </div>
-            </Card>
-          ))}
-        </div>
+    <section className="py-24 container mx-auto px-10 text-[#41423A] font-['Poppins']">
+      {/* Section Title */}
+      <motion.h2 
+        className="text-4xl font-bold text-center mb-16"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        Who We Are
+      </motion.h2>
+
+      {/* Layout Container */}
+      <div className="relative w-full max-w-6xl mx-auto grid grid-cols-3 gap-16 items-center">
+        {/* Left - Our Mission */}
+        <motion.div 
+          className="space-y-4 text-left" 
+          initial={{ opacity: 0, x: -50 }} 
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          whileHover={{ scale: 1.05 }}
+        >
+          <h3 className="text-2xl font-bold text-[#F05A28]">{infoBlocks[0].title}</h3>
+          <p className="text-[#41423A]/80">{infoBlocks[0].description}</p>
+          <p className="text-sm text-[#41423A]/70">{infoBlocks[0].content}</p>
+          <Image src={infoBlocks[0].image} alt="Mission" width={300} height={200} className="rounded-lg shadow-lg" />
+        </motion.div>
+
+        {/* Middle - Our Values (Top Center, More Space) */}
+        <motion.div 
+          className="space-y-6 text-center relative -top-16" 
+          initial={{ opacity: 0, y: -50 }} 
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          whileHover={{ scale: 1.05 }}
+        >
+          <h3 className="text-2xl font-bold text-[#F05A28]">{infoBlocks[1].title}</h3>
+          <p className="text-[#41423A]/80">{infoBlocks[1].description}</p>
+          <p className="text-sm text-[#41423A]/70">{infoBlocks[1].content}</p>
+          <Image src={infoBlocks[1].image} alt="Values" width={300} height={200} className="rounded-full shadow-lg border-4 border-[#F05A28]" />
+        </motion.div>
+
+        {/* Right - Our Vision */}
+        <motion.div 
+          className="space-y-4 text-right" 
+          initial={{ opacity: 0, x: 50 }} 
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          whileHover={{ scale: 1.05 }}
+        >
+          <h3 className="text-2xl font-bold text-[#F05A28]">{infoBlocks[2].title}</h3>
+          <p className="text-[#41423A]/80">{infoBlocks[2].description}</p>
+          <p className="text-sm text-[#41423A]/70">{infoBlocks[2].content}</p>
+          <Image src={infoBlocks[2].image} alt="Vision" width={300} height={200} className="rounded-lg shadow-lg" />
+        </motion.div>
       </div>
     </section>
-  )
+  );
 }
