@@ -45,9 +45,9 @@ export function Projects() {
           >
             {/* Project Image */}
             <motion.div
-              className="relative w-full md:w-1/2 p-6 rounded-lg shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+              className="relative w-full md:w-1/2 rounded-lg shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
               whileHover={{ scale: 1.05 }}
-              style={{ backgroundColor: theme === "dark" ? "#41423A" : "#FFFFFF" }}
+              // style={{ backgroundColor: theme === "dark" ? "#000000" : " #ffFFFF" }}
             >
               <motion.img
                 src={project.image}
