@@ -9,21 +9,21 @@ const infoBlocks = [
     description: "Empowering businesses through innovative technology solutions.",
     content:
       "We create cutting-edge software that drives digital transformation and makes complex technologies accessible to all businesses.",
-    image: "/assets/img2.png",
+    image: "/assets/image1.png",
   },
   {
     title: "Our Values",
     description: "Integrity, Innovation, Collaboration, Excellence.",
     content:
       "Integrity: Upholding the highest ethical standards. Innovation: Pushing boundaries. Collaboration: Harnessing teamwork. Excellence: Delivering the best.",
-    image: "/assets/img4.png",
+    image: "/assets/image2.png",
   },
   {
     title: "Our Vision",
     description: "To be the global leader in transformative tech solutions.",
     content:
       "We aim to be the go-to partner for businesses leveraging technology for growth, leading global innovation and positive change.",
-    image: "/assets/img3.jpeg",
+    image: "/assets/image3.jpeg",
   },
 ];
 
@@ -81,7 +81,7 @@ export function CompanyInfo() {
           <h3 className="text-2xl font-bold text-[#F05A28]">{infoBlocks[2].title}</h3>
           <p className="text-[#41423A]/80">{infoBlocks[2].description}</p>
           <p className="text-sm text-[#41423A]/70">{infoBlocks[2].content}</p>
-          <Image src={infoBlocks[2].image} alt="Vision" width={300} height={200} className="rounded-lg shadow-lg" />
+          <Image src={infoBlocks[2].image} alt="Vision" width={300} height={200} className="rounded-lg shadow-lg ml-10" />
         </motion.div>
       </div>
     </section>

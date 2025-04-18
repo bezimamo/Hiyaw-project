@@ -20,7 +20,7 @@ export function Navbar() {
         <Link href="/" className="flex flex-col items-start">
           <div className="flex items-center space-x-2">
             <img 
-              src="/assets/MASTER LOGO Y.O.png" 
+              src="/assets/SECONDARY LOGO YELLOW.png" 
               alt="Hiyaw Logo" 
               className="w-10 h-10"  
             />

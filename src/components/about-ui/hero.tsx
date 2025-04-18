@@ -13,65 +13,53 @@ export function AboutHero() {
 
         {/* Features List */}
         <div className="mt-10 space-y-8">
-          <div className="flex items-start space-x-8 md:space-x-12">
-            <div className="w-20 h-20 flex items-center justify-center rounded-full bg-[#F05A28]">
-              <FaGlobeAfrica className="text-white text-5xl" />
+          {[
+            {
+              icon: <FaGlobeAfrica className="text-white text-4xl" />,
+              title: 'Cultural Authenticity',
+              desc: 'We celebrate Ethiopian stories and heritage.',
+            },
+            {
+              icon: <FaUsers className="text-white text-4xl" />,
+              title: 'Community Empowerment',
+              desc: 'We build a supportive network for collaboration and growth.',
+            },
+            {
+              icon: <FaLightbulb className="text-white text-[36px]" />, // Slightly bigger to match others visually
+              title: 'Artistic Innovation',
+              desc: 'We embrace cutting-edge techniques to push creative boundaries.',
+            },
+            {
+              icon: <FaHandsHelping className="text-white text-4xl" />,
+              title: 'Social Responsibility',
+              desc: 'We inspire positive change through meaningful storytelling.',
+            },
+            {
+              icon: <FaUniversalAccess className="text-white text-4xl" />,
+              title: 'Inclusivity',
+              desc: 'We welcome diverse voices and perspectives.',
+            },
+          ].map(({ icon, title, desc }, index) => (
+            <div key={index} className="flex items-start space-x-8 md:space-x-12">
+              <div className="min-w-[5rem] min-h-[5rem] aspect-square flex-shrink-0 flex items-center justify-center rounded-full bg-[#F8B133]">
+                {icon}
+              </div>
+              <div>
+                <h3 className="text-xl md:text-2xl font-bold text-[#41423A]">{title}</h3>
+                <p className="text-sm md:text-base">{desc}</p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold text-[#41423A]">Cultural Authenticity</h3>
-              <p className="text-sm md:text-base">We celebrate Ethiopian stories and heritage.</p>
-            </div>
-          </div>
-
-          <div className="flex items-start space-x-8 md:space-x-12">
-            <div className="w-20 h-20 flex items-center justify-center rounded-full bg-[#F05A28]">
-              <FaUsers className="text-white text-5xl" />
-            </div>
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold text-[#41423A]">Community Empowerment</h3>
-              <p className="text-sm md:text-base">We build a supportive network for collaboration and growth.</p>
-            </div>
-          </div>
-
-          <div className="flex items-start space-x-8 md:space-x-12">
-            <div className="w-20 h-20 flex items-center justify-center rounded-full bg-[#F05A28]">
-              <FaLightbulb className="text-white text-5xl" />
-            </div>
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold text-[#41423A]">Artistic Innovation</h3>
-              <p className="text-sm md:text-base">We embrace cutting-edge techniques to push creative boundaries.</p>
-            </div>
-          </div>
-
-          <div className="flex items-start space-x-8 md:space-x-12">
-            <div className="w-20 h-20 flex items-center justify-center rounded-full bg-[#F05A28]">
-              <FaHandsHelping className="text-white text-5xl" />
-            </div>
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold text-[#41423A]">Social Responsibility</h3>
-              <p className="text-sm md:text-base">We inspire positive change through meaningful storytelling.</p>
-            </div>
-          </div>
-
-          <div className="flex items-start space-x-8 md:space-x-12">
-            <div className="w-20 h-20 flex items-center justify-center rounded-full bg-[#F05A28]">
-              <FaUniversalAccess className="text-white text-5xl" />
-            </div>
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold text-[#41423A]">Inclusivity</h3>
-              <p className="text-sm md:text-base">We welcome diverse voices and perspectives.</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
-      {/* Right Side - Larger Image */}
+      {/* Right Side - Image */}
       <div className="md:w-1/2 flex justify-center px-8 md:px-16 mt-8 md:mt-0">
         <Image
-          src="/assets/img1.png" // Replace with the correct image path
+          src="/assets/img1.png"
           alt="Ethiopian Culture"
-          width={600} // Increased image size
-          height={700} // Increased height for equal alignment with text
+          width={600}
+          height={700}
           className="rounded-lg shadow-lg object-cover"
         />
       </div>
