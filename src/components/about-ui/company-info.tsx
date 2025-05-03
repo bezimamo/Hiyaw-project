@@ -51,8 +51,8 @@ export function CompanyInfo() {
           whileHover={{ scale: 1.05 }}
         >
           <h3 className="text-2xl font-bold text-[#F05A28]">{infoBlocks[0].title}</h3>
-          <p className="text-[#41423A]/80">{infoBlocks[0].description}</p>
-          <p className="text-sm text-[#41423A]/70">{infoBlocks[0].content}</p>
+          <p className="text-[#41423A]/80 dark:text-white">{infoBlocks[0].description}</p>
+          <p className="text-sm text-[#41423A]/70 dark:text-white">{infoBlocks[0].content}</p>
           <Image src={infoBlocks[0].image} alt="Mission" width={300} height={200} className="rounded-lg shadow-lg" />
         </motion.div>
 
@@ -65,8 +65,8 @@ export function CompanyInfo() {
           whileHover={{ scale: 1.05 }}
         >
           <h3 className="text-2xl font-bold text-[#F05A28]">{infoBlocks[1].title}</h3>
-          <p className="text-[#41423A]/80">{infoBlocks[1].description}</p>
-          <p className="text-sm text-[#41423A]/70">{infoBlocks[1].content}</p>
+          <p className="text-[#41423A]/80 dark:text-white">{infoBlocks[1].description}</p>
+          <p className="text-sm text-[#41423A]/70 dark:text-white">{infoBlocks[1].content}</p>
           <Image src={infoBlocks[1].image} alt="Values" width={300} height={200} className="rounded-full shadow-lg border-4 border-[#F05A28]" />
         </motion.div>
 
@@ -79,8 +79,8 @@ export function CompanyInfo() {
           whileHover={{ scale: 1.05 }}
         >
           <h3 className="text-2xl font-bold text-[#F05A28]">{infoBlocks[2].title}</h3>
-          <p className="text-[#41423A]/80">{infoBlocks[2].description}</p>
-          <p className="text-sm text-[#41423A]/70">{infoBlocks[2].content}</p>
+          <p className="text-[#41423A]/80 dark:text-white">{infoBlocks[2].description}</p>
+          <p className="text-sm text-[#41423A]/70 dark:text-white">{infoBlocks[2].content}</p>
           <Image src={infoBlocks[2].image} alt="Vision" width={300} height={200} className="rounded-lg shadow-lg ml-10" />
         </motion.div>
       </div>

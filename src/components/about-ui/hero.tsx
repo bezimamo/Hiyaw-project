@@ -6,7 +6,7 @@ export function AboutHero() {
     <section className="flex flex-col md:flex-row items-center justify-between py-16 px-8 md:px-16 container mx-auto font-['Poppins']">
       {/* Left Side - Text Content */}
       <div className="md:w-1/2 text-left px-8 md:px-16 mb-8 md:mb-0">
-        <h4 className="text-lg font-extrabold text-[#41423A] mb-2">Why Choose Us</h4>
+        <h4 className="text-lg font-extrabold text-[#41423A] mb-2 dark:text-white">Why Choose Us</h4>
         <h1 className="text-4xl md:text-5xl mt-4 text-[#F05A28] font-bold leading-tight">
           Experience the magic of creativity with all our services.
         </h1>
@@ -45,7 +45,7 @@ export function AboutHero() {
                 {icon}
               </div>
               <div>
-                <h3 className="text-xl md:text-2xl font-bold text-[#41423A]">{title}</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-[#41423A] dark:text-white">{title}</h3>
                 <p className="text-sm md:text-base">{desc}</p>
               </div>
             </div>
@@ -53,16 +53,19 @@ export function AboutHero() {
         </div>
       </div>
 
-      {/* Right Side - Image */}
-      <div className="md:w-1/2 flex justify-center px-8 md:px-16 mt-8 md:mt-0">
-        <Image
-          src="/assets/img1.png"
-          alt="Ethiopian Culture"
-          width={600}
-          height={700}
-          className="rounded-lg shadow-lg object-cover"
-        />
-      </div>
+     {/* Right Side - Image */}
+<div className="md:w-1/2 flex justify-center px-8 md:px-16 mt-8 md:mt-0">
+  <div className="relative w-full h-auto aspect-[3/4]">
+    <Image
+      src="/assets/BG01c.jpg"
+      alt="Ethiopian Culture"
+      fill
+      className="rounded-lg shadow-lg object-cover"
+    />
+  </div>
+</div>
+
+
     </section>
   );
 }

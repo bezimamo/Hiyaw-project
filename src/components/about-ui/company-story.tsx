@@ -21,7 +21,7 @@ export function CompanyStory() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-4xl font-bold text-[#41423A] mb-6 leading-tight">
+          <h2 className="text-4xl font-bold text-[#41423A] mb-6 leading-tight dark:text-white">
             We Put <span className="relative">
               People
               <motion.span 
@@ -32,7 +32,7 @@ export function CompanyStory() {
               ></motion.span>
             </span> First
           </h2>
-          <p className="text-lg text-[#41423A] mb-8 leading-relaxed">
+          <p className="text-lg text-[#41423A] mb-8 leading-relaxed dark:text-white">
             At Hiyaw, we believe technology should empower people and make their lives easier. 
             Our mission is simple: to create solutions that prioritize people at every step.
           </p>
