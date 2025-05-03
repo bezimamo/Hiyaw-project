@@ -9,7 +9,7 @@ export function Projects() {
   return (
     <div
       className={`relative min-h-screen transition-colors duration-300 ${
-        theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+        theme === "dark" ? "bg-[#41423A] text-white" : "bg-white text-[#41423A]"
       }`}
     >
       {/* Background Grid Pattern */}
@@ -25,7 +25,7 @@ export function Projects() {
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-[#F8B133] to-[#F05A28]">
           Explore Our Animation Projects
         </h1>
-        <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
+        <p className="mt-4 text-lg text-[#41423A] dark:text-gray-300">
           Bringing creativity to life through breathtaking animations.
         </p>
       </motion.div>
@@ -47,7 +47,7 @@ export function Projects() {
             <motion.div
               className="relative w-full md:w-1/2 rounded-lg shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
               whileHover={{ scale: 1.05 }}
-              // style={{ backgroundColor: theme === "dark" ? "#000000" : " #ffFFFF" }}
+
             >
               <motion.img
                 src={project.image}
@@ -66,7 +66,7 @@ export function Projects() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl font-bold text-[#F8B133]">{project.title}</h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300">{project.type} • Animation</p>
+              <p className="text-lg text-[#41423A] dark:text-white">{project.type} • Animation</p>
               <Button
                 size="lg"
                 className="mt-4 rounded-full bg-[#F05A28] hover:bg-[#F8B133] text-white transition duration-300 ease-in-out"

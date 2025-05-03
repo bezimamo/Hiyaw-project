@@ -8,7 +8,7 @@ export function Trainings() {
   return (
     <section
       className={`relative flex flex-col items-center justify-center min-h-screen px-6 md:px-16 lg:px-24 transition-all duration-300 ${
-        theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+        theme === "dark" ? "bg-[#41423A] text-white" : "bg-white text-[#41423A]"
       }`}
     >
       {/* Background Grid Pattern */}

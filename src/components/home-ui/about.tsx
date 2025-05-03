@@ -13,7 +13,7 @@ export function About() {
   };
 
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-center min-h-screen px-6 md:px-16 lg:px-24 bg-white dark:bg-black transition-all duration-300">
+    <section className="relative flex flex-col md:flex-row items-center justify-center min-h-screen px-6 md:px-16 lg:px-24 bg-white dark:bg-[#41423A] transition-all duration-300">
       {/* Animated Character Section */}
       <motion.div
         initial={{ x: -100, opacity: 0 }}
