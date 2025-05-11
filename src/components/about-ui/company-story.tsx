@@ -11,7 +11,7 @@ export function CompanyStory() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="py-24 container mx-auto px-16 font-['Poppins']">
+    <section className="py-24 container mx-auto px-16 font-['Poppins'] dark:bg-[#41423A]">
       <div className="flex flex-col md:flex-row items-center justify-between gap-16">
         
         {/* Left Side - Text Content */}

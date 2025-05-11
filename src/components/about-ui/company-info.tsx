@@ -29,10 +29,10 @@ const infoBlocks = [
 
 export function CompanyInfo() {
   return (
-    <section className="py-24 container mx-auto px-10 text-[#41423A] font-['Poppins']">
+    <section className="py-24 container mx-auto px-10 text-[#41423A] font-['Poppins'] dark:bg-[#41423A]">
       {/* Section Title */}
       <motion.h2 
-        className="text-4xl font-bold text-center mb-16"
+        className="text-4xl font-bold text-center mb-16 dark:text-white"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

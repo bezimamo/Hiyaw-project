@@ -3,7 +3,7 @@ import { FaGlobeAfrica, FaUsers, FaLightbulb, FaHandsHelping, FaUniversalAccess 
 
 export function AboutHero() {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between py-16 px-8 md:px-16 container mx-auto font-['Poppins']">
+    <section className="flex flex-col md:flex-row items-center justify-between py-16 px-8 md:px-16 container mx-auto font-['Poppins'] dark:bg-[#41423A]">
       {/* Left Side - Text Content */}
       <div className="md:w-1/2 text-left px-8 md:px-16 mb-8 md:mb-0">
         <h4 className="text-lg font-extrabold text-[#41423A] mb-2 dark:text-white">Why Choose Us</h4>
