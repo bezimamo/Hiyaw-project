@@ -6,7 +6,7 @@ const teamMembers = [
   {
     name: "Amanuel Zebre",
     role: "Co-Founder / Animator",
-    image: "/assets/animator1.png",
+    image: "/assets/team/amanuel.jpg",
     background: "A 2D animator with 4+ years experience. Started on Fiverr in 2021 with lip-sync animations. Passionate about visual storytelling rooted in Ethiopian culture.",
     social: {
       instagram: "@a3anuel",
@@ -18,7 +18,7 @@ const teamMembers = [
   {
     name: "Biniyam Masresha",
     role: "Co-Founder / Visual Artist",
-    image: "/assets/animator2.png",
+    image: "/assets/team/bini.jpg",
     background: "2D animator and educator passionate about storytelling through expressive characters and visuals. Determined to redefine Ethiopian animation.",
     social: {
       instagram: "https://www.instagram.com/kebero27?igsh=MXRpODBkcWxmeWJmaQ==",
@@ -30,7 +30,7 @@ const teamMembers = [
   {
     name: "Yishak Abrham",
     role: "Clean-up Artist / Rigger",
-    image: "/assets/animator3.png",
+    image: "/assets/team/yishak.jpg",
     background: "Designer responsible for refining linework and choosing color palettes for characters and scenes.",
     social: {
       instagram: "https://www.instagram.com/yise__ab?igsh=MWVoN2JrMWNkdTZiNA==",
@@ -42,7 +42,7 @@ const teamMembers = [
   {
     name: "Bereket Getachew",
     role: "Animator / Character Designer",
-    image: "/assets/animator4.png",
+    image: "/assets/team/bereket.jpg",
     background: "Animator and character designer with 3 years in the industry, currently working on a comic series.",
     social: {
       instagram: "bereket2d",
@@ -54,7 +54,7 @@ const teamMembers = [
   {
     name: "Fikir Samuel",
     role: "2D Digital Artist",
-    image: "/assets/animator4.png",
+    image: "/assets/team/fikir.jpg",
     background: "Lover of drawing, comics, anime, and games. Blending creative passions into visuals.",
     social: {
       instagram: "#",

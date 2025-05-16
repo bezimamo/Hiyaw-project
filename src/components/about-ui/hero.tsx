@@ -57,7 +57,7 @@ export function AboutHero() {
 <div className="md:w-1/2 flex justify-center px-8 md:px-16 mt-8 md:mt-0">
   <div className="relative w-full h-auto aspect-[3/4]">
     <Image
-      src="/assets/BG01c.jpg"
+      src="/assets/project/image1.jpg"
       alt="Ethiopian Culture"
       fill
       className="rounded-lg shadow-lg object-cover"

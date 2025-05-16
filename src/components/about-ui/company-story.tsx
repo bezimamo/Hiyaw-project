@@ -75,12 +75,13 @@ export function CompanyStory() {
           transition={{ duration: 1 }}
         >
           <div className="w-[420px] h-[420px] bg-gradient-to-br from-[#F05A28]/20 to-[#F05A28]/40 rounded-full flex items-center justify-center shadow-lg overflow-hidden">
-            <Image 
-              src="/assets/innovation.gif" 
-              alt="Innovation Animation" 
-              width={400} 
-              height={400} 
-              className="rounded-full transform transition-transform duration-300 hover:scale-105" 
+            <video
+            src="/assets/project/candle.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-[420px] h-[420px] rounded-full object-cover transform transition-transform duration-300 hover:scale-105"
             />
           </div>
         </motion.div>
