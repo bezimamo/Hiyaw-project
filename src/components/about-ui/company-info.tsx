@@ -68,7 +68,7 @@ export function CompanyInfo() {
           <p className="text-sm text-[#41423A]/70 dark:text-white">{infoBlocks[1].content}</p>
   <div className="w-[300px] h-[300px] rounded-full overflow-hidden mx-auto shadow-lg">
     <video
-      src="/assets/project/coffee.mov"
+      src="/assets/project/MotionGifs/coffee.mov"
       autoPlay
       loop
       muted

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const CallToAction: React.FC = () => {
   return (
-    <section className="bg-[#41423A] py-20 px-6 text-white">
+    <section className="dark:bg-[#41423A] py-20 px-6 text-white">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* Left - Text */}
         <div>
@@ -25,9 +25,9 @@ const CallToAction: React.FC = () => {
         {/* Right - Visual (GIF or image) */}
         <div className="flex justify-center md:justify-end">
           <Image
-            src="/assets/proj-img-1.png" // Make sure this file exists
+            src="/assets/project/Storytelling/story6.jpg" // Make sure this file exists
             alt="Animated character"
-            width={400}
+            width={500}
             height={400}
             className="rounded-xl object-cover"
           />

@@ -76,7 +76,7 @@ export function CompanyStory() {
         >
           <div className="w-[420px] h-[420px] bg-gradient-to-br from-[#F05A28]/20 to-[#F05A28]/40 rounded-full flex items-center justify-center shadow-lg overflow-hidden">
             <video
-            src="/assets/project/candle.mp4"
+            src="/assets/project/MotionGifs/candle.mp4"
             autoPlay
             loop
             muted

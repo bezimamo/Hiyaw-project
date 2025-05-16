@@ -12,10 +12,35 @@ type ProjectGroup = {
 
 
 const isVideo = (filename: string) =>
-  filename.endsWith(".mp4") || filename.endsWith(".gif") || filename.endsWith(".mov");
+  filename.endsWith(".mp4") || filename.endsWith(".gif") || filename.endsWith(".mov") || filename.endsWith(".m4v");
 
 // ✅ Sample data (you can rename or add the rest later)
 const projects: ProjectGroup[] = [
+    {
+  title: "Roots of Grace",
+  description: "A young face bearing timeless tradition.",
+  image: "/assets/project/AgingFaces/img1.jpg",
+  details:
+    "Adorned with a delicate forehead cross and flowing traditional hair, this 10-year-old girl embodies the elegance and spiritual depth of ancient Ethiopian womanhood. A symbol of identity passed through generations.",
+  category: "AgingFaces",
+}
+, 
+{
+  title: "Buna Time",
+  description: "An animated tribute to Ethiopia’s rich coffee tradition.",
+  image: "/assets/project/MotionGifs/coffee.mov",
+  details:
+    "A visual homage to the Ethiopian coffee ceremony, capturing the grace and warmth of pouring coffee from a traditional jebena.",
+  category: "MotionGifs",
+},
+{
+  title: "Essence in Motion",
+  description: "A 360° character turn-around showcasing detailed design from every angle.",
+  image: "/assets/project/Storytelling/story6.jpg",
+  details:
+    "This visual breakdown presents a full turn-around of a character in five seamless steps — capturing style, posture, and personality in motion. It celebrates the artistry behind character development and form.",
+  category: "Storytelling",
+},
   {
     title: "Voices of the Forgotten",
     description: "An emotional 2D short exploring mental health stigma in Ethiopia.",
@@ -24,61 +49,114 @@ const projects: ProjectGroup[] = [
     category: "Storytelling",
   },
   {
-    title: "The Clay Drum - Part 1",
-    description: "A cultural tale about a young boy...",
-    image: "/assets/project/Storytelling/story2.jpg",
-    details: "Rooted in Ethiopian folklore...",
-    category: "Storytelling",
-  },
+  title: "Slip, Fall, Rise",
+  description: "A playful loop of Sack's unexpected tumble and recovery.",
+  image: "/assets/project/MotionGifs/sack.mp4",
+  details:
+    "Sack leaps from a height only to hilariously slip on a banana and crash to the ground — but in true animated spirit, he dusts himself off and stands tall. A short, fun reminder that falling is part of the story.",
+  category: "MotionGifs",
+},
+  
+   {
+  title: "Hope in His Eyes",
+  description: "A smile that carries dreams and ambition.",
+  image: "/assets/project/AgingFaces/img2.jpg",
+  details:
+    "This piece captures the radiant energy of a 20-year-old man, full of life, optimism, and readiness to embrace the future.",
+  category: "AgingFaces",
+}
+,
+ {
+  title: "The Clay Drum – Part 1",
+  description: "A bounty hunter, a child, and the price of recklessness.",
+  image: "/assets/project/Storytelling/story2.jpg",
+  details:
+    "Hired to eliminate mutated dogs on the radioactive outskirts of town, Mubarek stumbles upon a hidden child. Forced to protect him, the reckless hunter must confront his own impulsiveness to ensure the boy's survival.",
+  category: "Storytelling",
+}
+,
+{
+  title: "Squash & Stretch",
+  description: "A visual play on motion, weight, and exaggeration.",
+  image: "/assets/project/MotionGifs/squash_and_strech.mp4", // Confirm path
+  details:
+    "A short animation showcasing the classic squash and stretch principle — emphasizing the illusion of weight and flexibility in motion. Simple, stylized, and full of bounce.",
+  category: "MotionGifs",
+},
   {
     title: "Whispers of the River",
     description: "A poetic tale of nature and spiritual balance.",
-    image: "/assets/project/Storytelling/story3.jpg",
+    image: "/assets/project/Exercises/Exercise A-1.m4v",
     details:
       "This animation reflects the harmony between community and the natural world.",
-    category: "Storytelling",
+    category: "Exercises",
   },
-  
-  {
-    title: "The Clay Drum",
-    description: "A cultural tale about a young boy preserving his village’s traditions.",
-    image: "/assets/project/Storytelling/story4.jpg",
+
+{
+  title: "Whispers of the River",
+  description: "A broken man’s quiet fight for redemption.",
+  image: "/assets/project/Storytelling/story3.jpg",
+  details:
+    "Bernard, a refugee construction engineer haunted by loss and addiction, begins his journey toward healing. Set against the stillness of a foreign land, he seeks to rebuild not just his life — but himself.",
+  category: "Storytelling",
+}
+,
+ {
+  title: "Lines of Labor",
+  description: "A weathered face carved by decades of work.",
+  image: "/assets/project/AgingFaces/img3.jpg",
+  details:
+    "His expression tells stories of sacrifice and survival — a life of resilience, shaped by years of physical and emotional endurance.",
+  category: "AgingFaces",
+},
+    {
+    title: "Whispers of the River",
+    description: "A poetic tale of nature and spiritual balance.",
+    image: "/assets/project/Exercises/Exercise B-1.m4v",
     details:
-      "Rooted in Ethiopian folklore, this story blends tradition and imagination. It showcases the beauty of cultural heritage, while subtly addressing the impact of modern distractions on youth identity.",
-    category: "Storytelling",
-  },
-  {
-    title: "The Clay Drum",
-    description: "A cultural tale about a young boy preserving his village’s traditions.",
-    image: "/assets/project/Storytelling/story5.jpg",
-    details:
-      "Rooted in Ethiopian folklore, this story blends tradition and imagination. It showcases the beauty of cultural heritage, while subtly addressing the impact of modern distractions on youth identity.",
-    category: "Storytelling",
-  },
-  {
-    title: "Together We Heal",
-    description: "A collaborative animation created with community members.",
-    image: "/assets/project/Storytelling/story6.jpg",
-    details:
-      "Created through community workshops, this piece represents healing after trauma. It empowers individuals to share their stories through collaborative storytelling and creative animation.",
-    category: "Storytelling",
-  },
-  {
-    title: "Light in the Shadows",
-    description: "A journey of resilience and personal transformation.",
-    image: "/assets/project/Storytelling/story7.jpg",
-    details:
-      "This story follows a teen facing personal trauma and healing through creativity.",
-    category: "Storytelling",
+      "This animation reflects the harmony between community and the natural world.",
+    category: "Exercises",
   },
   {
-    title: "Colors of Heritage",
-    description: "An animated celebration of Ethiopian traditional clothing.",
-    image: "/assets/project/MotionGifs/coffee.mov",
+  title: "The Clay Drum",
+  description: "Erguman’s misadventures in the search for dignity and yoghurt.",
+  image: "/assets/project/Storytelling/story4.jpg",
+  details:
+    "After squandering his savings chasing a cult dream and losing his band, Erguman finds himself running odd errands for a yoghurt a day. This offbeat tale follows his chaotic path toward financial freedom — one awkward job at a time.",
+  category: "Storytelling",
+},
+    {
+    title: "Whispers of the River",
+    description: "A poetic tale of nature and spiritual balance.",
+    image: "/assets/project/Exercises/Exercise C-1.m4v",
     details:
-      "Highlighting Ethiopian fashion and design through animated illustration.",
-    category: "MotionGifs",
+      "This animation reflects the harmony between community and the natural world.",
+    category: "Exercises",
   },
+    {
+  title: "Candlelight",
+  description: "A gentle flicker in the dark, full of warmth and stillness.",
+  image: "/assets/project/MotionGifs/candle.mp4",
+  details:
+    "This subtle animation captures the soft movement of a candle flame — symbolizing calm, reflection, and the fragile beauty of light in darkness.",
+  category: "MotionGifs",
+},
+  {
+  title: "The Sky Serpent: Origin",
+  description: "An archaeologist’s quest to uncover the truth behind her father’s disappearance.",
+  image: "/assets/project/Storytelling/story5.jpg", // Replace with actual image path if different
+  details:
+    "Yun, once a child enchanted by her father's bedtime stories, is now a renowned archaeologist. Her journey leads her to a remote temple wrapped in myth and memory, where she seeks answers about her father’s vanishing — and the secrets buried in ancient Chinese lore.",
+  category: "Storytelling",
+}, 
+ {
+  title: "Kindled Flame",
+  description: "A quiet moment of ignition — where light meets purpose.",
+  image: "/assets/project/MotionGifs/untitled.mp4",
+  details:
+    "This animation portrays a man gently lighting a candle with a match. It symbolizes intention, renewal, and the quiet power of a single spark in the darkness.",
+  category: "MotionGifs",
+},
   {
     title: "Whispers of the River",
     description: "A poetic tale of nature and spiritual balance.",
@@ -87,31 +165,7 @@ const projects: ProjectGroup[] = [
       "This animation reflects the harmony between community and the natural world.",
     category: "MotionGifs",
   },
-  
-  {
-    title: "The Clay Drum",
-    description: "A cultural tale about a young boy preserving his village’s traditions.",
-    image: "/assets/project/MotionGifs/candle.mp4",
-    details:
-      "Rooted in Ethiopian folklore, this story blends tradition and imagination. It showcases the beauty of cultural heritage, while subtly addressing the impact of modern distractions on youth identity.",
-    category: "MotionGifs",
-  },
-    {
-    title: "Whispers of the River",
-    description: "A poetic tale of nature and spiritual balance.",
-    image: "/assets/project/MotionGifs/sack.mp4",
-    details:
-      "This animation reflects the harmony between community and the natural world.",
-    category: "MotionGifs",
-  },
-    {
-    title: "Whispers of the River",
-    description: "A poetic tale of nature and spiritual balance.",
-    image: "/assets/project/MotionGifs/squash_and_strech.mp4",
-    details:
-      "This animation reflects the harmony between community and the natural world.",
-    category: "MotionGifs",
-  },
+
     {
     title: "Whispers of the River",
     description: "A poetic tale of nature and spiritual balance.",
@@ -120,13 +174,31 @@ const projects: ProjectGroup[] = [
       "This animation reflects the harmony between community and the natural world.",
     category: "MotionGifs",
   },
+ {
+  title: "Lij Kut: Rise of the Warrior",
+  description: "A young warrior’s journey to fight darkness and discover unexpected allies.",
+  image: "/assets/project/Storytelling/story7.jpg", 
+  details:
+    "After witnessing the loss of his parents to monstrous creatures, Kut vows to protect the innocent. His path to power leads him to a hidden glade where he encounters a mystical Pegasus—challenging his view of good and evil. With loyal friends and a newfound purpose, Kut joins a military force to battle the darkness and unveil the origin of its terror.",
+  category: "Storytelling",
+},
+
+   {
+  title: "Silver Years",
+  description: "Grace, wisdom, and the calm of a long journey.",
+  image: "/assets/project/AgingFaces/img4.jpg",
+  details:
+    "Crowned with white hair, this portrait honors the legacy of age — a lifetime of memories reflected in gentle eyes and quiet strength.",
+  category: "AgingFaces",
+}
+,
     {
     title: "Whispers of the River",
     description: "A poetic tale of nature and spiritual balance.",
-    image: "/assets/project/MotionGifs/untitled.mp4",
+    image: "/assets/project/Exercises/Exercise D-1.m4v",
     details:
       "This animation reflects the harmony between community and the natural world.",
-    category: "MotionGifs",
+    category: "Exercises",
   },
     {
     title: "Whispers of the River",
@@ -227,39 +299,43 @@ const ProjectGallery: React.FC = () => {
       </div>
 
       {/* Modal */}
-      {selectedProject && (
-        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 px-4">
-          <div className="bg-white dark:bg-[#41423A] rounded-lg p-6 max-w-md w-full relative">
-            <button
-              onClick={closeModal}
-              className="absolute top-2 right-2 text-[#F05A28] hover:text-[#F8B133] text-2xl font-bold"
-            >
-              &times;
-            </button>
-            <h3 className="text-2xl font-bold mb-2 text-[#41423A] dark:text-white">
-              {selectedProject.title}
-            </h3>
-            <p className="mb-4 text-[#41423A] dark:text-white">
-              {selectedProject.details}
-            </p>
-            {isVideo(selectedProject.image) ? (
-              <video
-                src={selectedProject.image}
-                controls
-                className="rounded-lg w-full"
-              />
-            ) : (
-              <Image
-                src={selectedProject.image}
-                alt={selectedProject.title}
-                width={500}
-                height={300}
-                className="rounded-lg"
-              />
-            )}
-          </div>
-        </div>
-      )}
+     {selectedProject && (
+  <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 px-4 overflow-y-auto">
+    <div className="bg-white dark:bg-[#2D2E28] rounded-lg max-w-3xl w-full p-6 relative max-h-[90vh] overflow-y-auto">
+      <button
+        onClick={closeModal}
+        className="absolute top-4 right-4 text-black dark:text-white text-2xl font-bold"
+      >
+        &times;
+      </button>
+
+      <h3 className="text-2xl font-bold mb-4 text-[#41423A] dark:text-white">
+        {selectedProject.title}
+      </h3>
+
+      <div className="mb-4">
+        {isVideo(selectedProject.image) ? (
+          <video
+            src={selectedProject.image}
+            controls
+            className="max-h-[60vh] w-full object-contain rounded-lg"
+          />
+        ) : (
+          <Image
+            src={selectedProject.image}
+            alt={selectedProject.title}
+            width={800}
+            height={600}
+            className="max-h-[60vh] w-full object-contain rounded-lg"
+          />
+        )}
+      </div>
+
+      <p className="text-gray-800 dark:text-gray-200">{selectedProject.details}</p>
+    </div>
+  </div>
+)}
+
     </section>
   );
 };
