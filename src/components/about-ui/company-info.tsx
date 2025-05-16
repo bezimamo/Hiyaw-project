@@ -22,7 +22,7 @@ const infoBlocks = [
     description: "To be the global leader in transformative tech solutions.",
     content:
       "We aim to be the go-to partner for businesses leveraging technology for growth, leading global innovation and positive change.",
-    image: "/assets/project/story6.jpg",
+    image: "/assets/project/Storytelling/story6.jpg",
   },
 ];
 
