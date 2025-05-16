@@ -24,7 +24,7 @@ export function AboutHero() {
           What Sets Us Apart
         </h4>
         <h1 className="text-4xl md:text-5xl mt-4 text-[#F05A28] font-bold leading-tight">
-          Experience the magic of creativity with all our services.
+          Reimagining creativity through culture, purpose, and passion.
         </h1>
 
         {/* Features List */}
@@ -91,6 +91,7 @@ export function AboutHero() {
             src="/assets/project/image1.jpg"
             alt="Creative Collaboration"
             fill
+           priority
             className="rounded-lg shadow-lg object-cover"
           />
         </div>

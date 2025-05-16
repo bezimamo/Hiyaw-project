@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 export function CompanyStory() {
@@ -54,15 +53,16 @@ export function CompanyStory() {
               <DialogHeader>
                 <DialogTitle className="text-xl font-bold text-[#41423A]">Our Story</DialogTitle>
               </DialogHeader>
-              <div className="mt-6 text-[#41423A] text-sm">
-                <p>
-                  From our beginnings as a small team with big dreams, we've been driven by a commitment to innovation and collaboration. 
-                  Our journey has been about building a company that places people at the center—whether they are team members, clients, or the communities we serve.
-                </p>
-                <p className="mt-4">
-                  We focus on creating tech that genuinely makes a difference, and we're excited about continuing to shape the future, one solution at a time.
-                </p>
-              </div>
+              <div className="mt-6 text-[#41423A] text-sm"> 
+  <p>
+    From our beginnings as a small team with big dreams, we&apos;ve been driven by a commitment to innovation and collaboration. 
+    Our journey has been about building a company that places people at the center—whether they are team members, clients, or the communities we serve.
+  </p>
+  <p className="mt-4">
+    We focus on creating tech that genuinely makes a difference, and we&apos;re excited about continuing to shape the future, one solution at a time.
+  </p>
+</div>
+
             </DialogContent>
           </Dialog>
         </motion.div>
