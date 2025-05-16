@@ -3,30 +3,31 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { FaQuoteLeft, FaInstagram, FaTelegram, FaTiktok, FaLink,  } from "react-icons/fa";
 
 const teamMembers = [
-  {
-    name: "Amanuel Zebre",
-    role: "Co-Founder / Animator",
-    image: "/assets/team/amanuel.jpg",
-    background: "A 2D animator with 4+ years experience. Started on Fiverr in 2021 with lip-sync animations. Passionate about visual storytelling rooted in Ethiopian culture.",
-    social: {
-      instagram: "@a3anuel",
-      telegram: "@a3anuel",
-      tiktok: "@a3anuel",
-      portfolio: "@a3anuel"
-    }
-  },
-  {
-    name: "Biniyam Masresha",
-    role: "Co-Founder / Visual Artist",
-    image: "/assets/team/bini.jpg",
-    background: "2D animator and educator passionate about storytelling through expressive characters and visuals. Determined to redefine Ethiopian animation.",
-    social: {
-      instagram: "https://www.instagram.com/kebero27?igsh=MXRpODBkcWxmeWJmaQ==",
-      linkedin: "https://www.linkedin.com/in/biniyam-masresha-556403326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      tiktok: "https://www.tiktok.com/@kebero27?_t=ZM-8vOGtHKBDtf&_r=1",
-      portfolio: "https://www.behance.net/bini27"
-    }
-  },
+{
+  name: "Amanuel Zebre",
+  role: "Co-Founder / Animator",
+  image: "/assets/team/amanuel.jpg",
+  background: "A 2D animator with 4+ years experience. Started on Fiverr in 2021 with lip-sync animations. Passionate about visual storytelling rooted in Ethiopian culture.",
+  social: {
+    instagram: "https://www.instagram.com/a3anuel",
+    telegram: "https://t.me/a3anuel",
+    tiktok: "https://www.tiktok.com/@a3anuel",
+    portfolio: "https://www.behance.net/a3anuel"
+  }
+},
+ {
+  name: "Biniyam Masresha",
+  role: "Co-Founder / Visual Artist",
+  image: "/assets/team/bini.jpg",
+  background: "2D animator and educator passionate about storytelling through expressive characters and visuals. Determined to redefine Ethiopian animation.",
+  social: {
+    instagram: "https://www.instagram.com/kebero27?igsh=MXRpODBkcWxmeWJmaQ==",
+    tiktok: "https://www.tiktok.com/@kebero27?_t=ZM-8vOGtHKBDtf&_r=1",
+    portfolio: "https://www.behance.net/bini27",
+    telegram: "https://t.me/Bini27"
+  }
+}
+,
   {
     name: "Yishak Abrham",
     role: "Clean-up Artist / Rigger",
@@ -39,18 +40,18 @@ const teamMembers = [
       portfolio: "https://www.fiverr.com/s/GzjQD9q"
     }
   },
-  {
-    name: "Bereket Getachew",
-    role: "Animator / Character Designer",
-    image: "/assets/team/bereket.jpg",
-    background: "Animator and character designer with 3 years in the industry, currently working on a comic series.",
-    social: {
-      instagram: "bereket2d",
-      telegram: "@bereket2d",
-      tiktok: "@bereket2d",
-      portfolio: "https://t.me/bereket2ddraws"
-    }
-  },
+{
+  name: "Bereket Getachew",
+  role: "Animator / Character Designer",
+  image: "/assets/team/bereket.jpg",
+  background: "Animator and character designer with 3 years in the industry, currently working on a comic series.",
+  social: {
+    instagram: "https://www.instagram.com/bereket2d",
+    telegram: "https://t.me/bereket2d",
+    tiktok: "https://www.tiktok.com/@bereket2d",
+    portfolio: "https://t.me/bereket2ddraws"
+  }
+},
   {
     name: "Fikir Samuel",
     role: "2D Digital Artist",
@@ -58,7 +59,7 @@ const teamMembers = [
     background: "Lover of drawing, comics, anime, and games. Blending creative passions into visuals.",
     social: {
       instagram: "#",
-      telegram: "@nonchallagrind",
+      telegram: "https://t.me/@nonchallagrind",
       tiktok: "#",
       portfolio: "https://sites.google.com/view/fikirsaumuel-egi-2dsubmissions/home"
     }

@@ -81,8 +81,8 @@ export function AboutHero() {
 
       {/* Right Side - Image */}
       <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, x: -50 }}
+      animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         className="md:w-1/2 flex justify-center px-8 md:px-16 mt-8 md:mt-0 min-h-[600px] items-center"
       >
