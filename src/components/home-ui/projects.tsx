@@ -32,50 +32,66 @@ export function Projects() {
 
       {/* Projects Section */}
       <div className="container mx-auto px-6 py-8 space-y-12">
-        {projects.map((project, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: index * 0.2 }}
-            className={`flex flex-col md:flex-row items-center justify-between gap-8 ${
-              index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-            }`}
-          >
-            {/* Project Image */}
-            <motion.div
-              className="relative w-full md:w-1/2 rounded-lg shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
-              whileHover={{ scale: 1.05 }}
+        {projects.map((project, index) => {
+          const isVideo = project.image.endsWith(".mp4") || project.image.endsWith(".mov");
 
-            >
-              <motion.img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-[300px] object-cover rounded-lg"
-                transition={{ duration: 0.4 }}
-              />
-            </motion.div>
-
-            {/* Project Details */}
+          return (
             <motion.div
-              className="w-full md:w-1/2 space-y-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              key={index}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className={`flex flex-col md:flex-row items-center justify-between gap-8 ${
+                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              }`}
             >
-              <h2 className="text-3xl font-bold text-[#F8B133]">{project.title}</h2>
-              <p className="text-lg text-[#41423A] dark:text-white">{project.type} • Animation</p>
-              <Button
-                size="lg"
-                className="mt-4 rounded-full bg-[#F05A28] hover:bg-[#F8B133] text-white transition duration-300 ease-in-out"
+              {/* Project Media */}
+              <motion.div
+                className="relative w-full md:w-1/2 rounded-lg shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                whileHover={{ scale: 1.05 }}
               >
-                View Details
-              </Button>
+                {isVideo ? (
+                  <video
+                    src={project.image}
+                    controls
+                    autoPlay
+                    loop
+                    muted
+                    className="w-full h-[300px] object-cover rounded-lg"
+                  />
+                ) : (
+                  <motion.img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-[300px] object-cover rounded-lg"
+                    transition={{ duration: 0.4 }}
+                  />
+                )}
+              </motion.div>
+
+              {/* Project Details */}
+              <motion.div
+                className="w-full md:w-1/2 space-y-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <h2 className="text-3xl font-bold text-[#F8B133]">{project.title}</h2>
+                <p className="text-lg text-[#41423A] dark:text-white">
+                  {project.type} • Animation
+                </p>
+                <Button
+                  size="lg"
+                  className="mt-4 rounded-full bg-[#F05A28] hover:bg-[#F8B133] text-white transition duration-300 ease-in-out"
+                >
+                  View Details
+                </Button>
+              </motion.div>
             </motion.div>
-          </motion.div>
-        ))}
+          );
+        })}
       </div>
 
       {/* CTA Button */}
@@ -95,16 +111,16 @@ const projects = [
   {
     title: "Hero Corps",
     type: "2D Animation",
-    image: "/project1.png",
+    image: "/assets/project/MotionGifs/fish.mp4",
   },
   {
     title: "Ajaka Lost in Rome",
     type: "2D Animation",
-    image: "/project2.png",
+    image: "/assets/project/MotionGifs/candle.mp4",
   },
   {
     title: "Astonishing Beki",
     type: "3D Animation",
-    image: "/project3.png",
+    image: "/assets/project/MotionGifs/sack.mp4",
   },
 ];

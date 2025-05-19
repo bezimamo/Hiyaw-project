@@ -24,7 +24,7 @@ export function About() {
       >
         <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
           <Image
-            src="/about.png"
+            src="/assets/project/image2.jpg"
             alt="Hero Character"
             width={500}
             height={500}
