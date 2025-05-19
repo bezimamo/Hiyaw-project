@@ -44,10 +44,13 @@ export function Trainings() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
-            {/* Animated Image */}
-            <motion.img
-              src={training.image}
-              alt={training.title}
+            {/* Animated Video */}
+            <motion.video
+              src={training.video}
+              autoPlay
+              loop
+              muted
+              playsInline
               className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110"
             />
 
@@ -65,20 +68,21 @@ export function Trainings() {
   );
 }
 
+// ✅ Use leading slash for public files in Next.js
 const trainings = [
   {
     title: "Mastering Keyframe Animation",
     date: "March 10, 2025",
-    image: "/about.png",
+    video: "/assets/project/Exercises/Exercise A-1.m4v",
   },
   {
     title: "Animating with Framer Motion",
     date: "March 15, 2025",
-    image: "/about.png",
+    video: "/assets/project/Exercises/Exercise B-1.m4v",
   },
   {
     title: "Advanced CSS Animations",
     date: "March 22, 2025",
-    image: "about.png",
+    video: "/assets/project/Exercises/Exercise C-1.m4v",
   },
 ];
