@@ -11,7 +11,7 @@ export const Hero = () => {
           fill
           priority
           quality={90}
-          className="object-contain object-center" // ← Fixed here
+          className="object-contain object-center"
           sizes="100vw"
         />
       </div>
@@ -27,12 +27,17 @@ export const Hero = () => {
         <p className="text-white text-lg sm:text-xl max-w-2xl mx-auto mb-8 animate-fade-in-up delay-100">
           Transform your drawings into captivating stories with professional animation techniques
         </p>
-        <button className="bg-[#F05A28] hover:bg-[#F8B133] text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 animate-fade-in-up delay-200 shadow-lg">
-          Start Learning Today
-        </button>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfDQfWtFJ5w3xYc9Q_b6YI0X2bUKFyBdfNRXqWu0U-xxxxxxxx/viewform" // ← Replace with your actual form link
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-[#F05A28] hover:bg-[#F8B133] text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 animate-fade-in-up delay-200 shadow-lg"
+        >
+          Enroll Now
+        </a>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator (Optional) */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />

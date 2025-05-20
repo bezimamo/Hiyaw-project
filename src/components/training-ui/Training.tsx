@@ -3,9 +3,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-  Video, PencilRuler, Sparkles, BookOpen,
-  PlayCircle, Send, Rocket, User,
+  PencilRuler, Sparkles, BookOpen,
+  PlayCircle, Send, Rocket, User, Video,
 } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
 
 export const Training = () => {
   const learnItems = [
@@ -15,6 +18,12 @@ export const Training = () => {
     { icon: <BookOpen size={24} />, label: 'Storyboarding' },
     { icon: <PlayCircle size={24} />, label: 'Digital Tools' },
     { icon: <Send size={24} />, label: 'Publishing Skills' },
+  ];
+
+  const groupPhotos = [
+    '/assets/team/group1.jpg',
+    '/assets/team/group2.jpg',
+    '/assets/team/group3.jpg',
   ];
 
   return (
@@ -34,25 +43,32 @@ export const Training = () => {
             Learn animation from the ground up using real-world workflows. No prior experience required.
           </p>
           <a
-            href="#contact"
-            className="bg-[#F05A28] hover:bg-[#41423A] text-white font-semibold py-3 px-6 rounded-full transition"
+            href="/contact"
+            className="bg-[#F05A28] hover:bg-[#F8B133] text-white font-semibold py-3 px-6 rounded-full transition"
           >
             Contact Us
           </a>
         </div>
 
-        {/* Right: Video Preview */}
+        {/* Right: Group Photo Carousel */}
         <div className="w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
-          <video
-            className="w-full h-full object-cover"
-            autoPlay
+          <Swiper
+            spaceBetween={20}
+            slidesPerView={1}
             loop
-            muted
-            playsInline
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            modules={[Autoplay]}
           >
-            <source src="/assets/project/MotionGifs/fish.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+            {groupPhotos.map((src, idx) => (
+              <SwiperSlide key={idx}>
+                <img
+                  src={src}
+                  alt={`Group Photo ${idx + 1}`}
+                  className="w-full h-full object-cover rounded-xl"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </motion.section>
 
@@ -116,6 +132,7 @@ export const Training = () => {
           ))}
         </div>
 
+        {/* Get Started */}
         <div className="text-center">
           <motion.h3
             className="text-3xl font-bold mb-4"
@@ -136,14 +153,16 @@ export const Training = () => {
             Contact us to learn more or enroll in our upcoming sessions.
           </motion.p>
           <motion.a
-            href="#contact"
-            className="bg-[#F05A28] hover:bg-[#41423A] text-white font-semibold py-3 px-6 rounded-full shadow transition"
+            href="https://forms.gle/your-google-form-id"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#F05A28] hover:bg-[#F8B133] text-white font-semibold py-3 px-6 rounded-full shadow transition"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            Contact Us
+            Enroll Now
           </motion.a>
         </div>
       </motion.section>

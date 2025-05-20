@@ -2,24 +2,30 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-export function Projects() {
+interface ProjectsProps {
+  showAll?: boolean;
+}
+
+export function Projects({ showAll = false }: ProjectsProps) {
   const [isDark, setIsDark] = useState(false);
 
-  // Ensure we only check for theme on the client
   useEffect(() => {
     if (typeof window !== "undefined") {
       setIsDark(window.matchMedia("(prefers-color-scheme: dark)").matches);
     }
   }, []);
 
+  const displayedProjects = showAll ? projects : projects.slice(0, 2);
+
   return (
     <div className="relative min-h-screen bg-white text-[#41423A] dark:bg-[#41423A] dark:text-white transition-colors duration-300">
-      {/* Background Grid Pattern */}
-      <div className="absolute inset-0 h-full w-full [background:radial-gradient(#F8B133_1px,transparent_1px)] [background-size:16px_16px] opacity-20 dark:opacity-30 pointer-events-none"></div>
+      {/* Background Grid */}
+      <div className="absolute inset-0 h-full w-full [background:radial-gradient(#F8B133_1px,transparent_1px)] [background-size:16px_16px] opacity-20 dark:opacity-30 pointer-events-none" />
 
-      {/* Header Section */}
+      {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -29,14 +35,14 @@ export function Projects() {
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-[#F8B133] to-[#F05A28]">
           Explore Our Animation Projects
         </h1>
-        <p className={`mt-4 text-lg ${isDark ? "text-gray-300" : "text-[#41423A]"}`}>
+        <p className={`mt-4 text-lg ${isDark ? "text-white" : "text-[#41423A]"}`}>
           Bringing creativity to life through breathtaking animations.
         </p>
       </motion.div>
 
-      {/* Projects Section */}
-      <div className="container mx-auto px-6 py-8 space-y-12">
-        {projects.map((project, index) => {
+      {/* Projects */}
+      <div className="container mx-auto px-6 py-8 space-y-16">
+        {displayedProjects.map((project, index) => {
           const isVideo = project.image.endsWith(".mp4") || project.image.endsWith(".mov");
 
           return (
@@ -46,13 +52,12 @@ export function Projects() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className={`flex flex-col md:flex-row items-center justify-between gap-8 ${
+              className={`flex flex-col md:flex-row items-center justify-between gap-10 ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               }`}
             >
-              {/* Project Media */}
               <motion.div
-                className="relative w-full md:w-1/2 rounded-lg shadow-xl overflow-hidden transition duration-300 hover:scale-105 hover:shadow-2xl"
+                className="relative w-full md:w-1/2 rounded-lg overflow-hidden shadow-xl transition duration-300 hover:scale-105"
                 whileHover={{ scale: 1.05 }}
               >
                 {isVideo ? (
@@ -62,19 +67,18 @@ export function Projects() {
                     autoPlay
                     loop
                     muted
-                    className="w-full h-[300px] object-cover rounded-lg"
+                    className="w-full h-[400px] object-cover rounded-lg"
                   />
                 ) : (
                   <motion.img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-[300px] object-cover rounded-lg"
+                    className="w-full h-[400px] object-cover rounded-lg"
                     transition={{ duration: 0.4 }}
                   />
                 )}
               </motion.div>
 
-              {/* Project Details */}
               <motion.div
                 className="w-full md:w-1/2 space-y-4"
                 initial={{ opacity: 0, y: 20 }}
@@ -83,48 +87,51 @@ export function Projects() {
                 transition={{ duration: 0.8 }}
               >
                 <h2 className="text-3xl font-bold text-[#F8B133]">{project.title}</h2>
-                <p className={`text-lg ${isDark ? "text-white" : "text-[#41423A]"}`}>
-                  {project.type} • Animation
-                </p>
-                <Button
-                  size="lg"
-                  className="mt-4 rounded-full bg-[#F05A28] hover:bg-[#F8B133] text-white transition duration-300 ease-in-out"
-                >
-                  View Details
-                </Button>
+                <p className="text-md font-semibold text-[#F05A28]">{project.type} • Animation</p>
+                <p className="text-base text-[#41423A] dark:text-white">
+  {project.description}
+</p>
+
               </motion.div>
             </motion.div>
           );
         })}
       </div>
 
-      {/* CTA Button */}
-      <div className="text-center mt-12">
-        <Button
-          size="lg"
-          className="rounded-full bg-[#F05A28] hover:bg-[#F8B133] text-white transition duration-300 ease-in-out"
-        >
-          See More Projects
-        </Button>
-      </div>
+      {/* CTA */}
+      {!showAll && (
+        <div className="text-center mt-12">
+          <Link href="/project">
+            <Button
+              size="lg"
+              className="rounded-full bg-[#F05A28] hover:bg-[#F8B133] text-white transition duration-300 ease-in-out"
+            >
+              See More Projects
+            </Button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
 
 const projects = [
   {
-    title: "Hero Corps",
+    title: "Buna Time",
+    type: "2D Animation",
+    image: "/assets/project/MotionGifs/coffee.mov",
+    description: "A stylized animation of Ethiopian coffee preparation, showcasing squash and stretch principles for bouncy motion and character."
+  },
+  {
+    title: "Squash and Stretch",
+    type: "2D Animation",
+    image: "/assets/project/MotionGifs/squash_and_strech.mp4",
+    description: "This animation demonstrates the core principle of squash and stretch through an expressive bouncing character design."
+  },
+  {
+    title: "Fish Animation",
     type: "2D Animation",
     image: "/assets/project/MotionGifs/fish.mp4",
-  },
-  {
-    title: "Ajaka Lost in Rome",
-    type: "2D Animation",
-    image: "/assets/project/MotionGifs/candle.mp4",
-  },
-  {
-    title: "Astonishing Beki",
-    type: "2D Animation",
-    image: "/assets/project/MotionGifs/sack.mp4",
+    description: "A whimsical looping animation of a swimming fish, highlighting fluid motion and underwater dynamics."
   },
 ];

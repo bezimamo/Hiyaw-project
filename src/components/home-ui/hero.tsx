@@ -45,25 +45,24 @@ export function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-20 text-center px-6 max-w-2xl space-y-6 animate-fade-in">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-[#F8B133] to-[#F05A28]">
-          Elevate Your Story with Animation
-        </h1>
+      <div className="relative z-20 text-center px-6 max-w-2xl animate-fade-in">
+  <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-[#F8B133] to-[#F05A28]">
+    Elevate Your Story with Animation
+  </h1>
 
-        <p className="max-w-[600px] md:text-xl text-[#41423A] dark:text-white mx-auto">
-  Learn industry-standard 2D animation skills and bring your ideas to life through our expert-led training program.
-</p>
+  <p className="max-w-[600px] mx-auto mt-6 md:text-xl text-[#41423A] dark:text-white">
+    Learn industry-standard 2D animation skills and bring your ideas to life through our expert-led training program.
+  </p>
 
-<a href="/training">
-  <Button
-    size="lg"
-    className="rounded-full bg-[#F05A28] hover:bg-[#F8B133] text-white transition-all duration-300"
-  >
-    Explore Training
-  </Button>
-</a>
-
-      </div>
+  <a href="/training">
+    <Button
+      size="lg"
+      className="mt-4 rounded-full bg-[#F05A28] hover:bg-[#F8B133] text-white transition-all duration-300"
+    >
+      Explore Training
+    </Button>
+  </a>
+</div>
     </div>
   );
 }
