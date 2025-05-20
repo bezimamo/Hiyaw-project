@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 export function Trainings() {
   const { theme } = useTheme();
@@ -12,7 +13,7 @@ export function Trainings() {
       }`}
     >
       {/* Background Grid Pattern */}
-      <div className="absolute inset-0 h-full w-full [background:radial-gradient(#F8B133_1px,transparent_1px)] [background-size:16px_16px] opacity-20 dark:opacity-30"></div>
+      <div className="absolute inset-0 h-full w-full [background:radial-gradient(#F8B133_1px,transparent_1px)] [background-size:16px_16px] opacity-20 dark:opacity-30 pointer-events-none"></div>
 
       <motion.h2
         className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#F8B133] to-[#F05A28]"
@@ -33,52 +34,71 @@ export function Trainings() {
       </motion.p>
 
       {/* Training Grid */}
-      <div className="grid md:grid-cols-3 gap-8 px-4 w-full max-w-6xl">
+      <div className="grid md:grid-cols-3 gap-8 w-full max-w-6xl">
         {trainings.map((training, index) => (
           <motion.div
             key={index}
-            className="relative overflow-hidden rounded-lg shadow-xl cursor-pointer group"
-            whileHover={{ scale: 1.05 }}
+            className="overflow-hidden rounded-xl shadow-lg bg-white dark:bg-[#32332D] transition-transform duration-300 hover:scale-105"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
-            {/* Animated Image */}
-            <motion.img
-              src={training.image}
-              alt={training.title}
-              className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110"
+            <video
+              src={training.video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-60 object-cover"
             />
-
-            {/* Overlay Text Animation */}
-            <motion.div
-              className="absolute inset-0 bg-[#41423A] bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-            >
-              <h3 className="text-2xl font-bold text-white">{training.title}</h3>
-              <p className="text-lg text-[#F8B133]">{training.date}</p>
-            </motion.div>
+            <div className="p-4">
+              <h3 className="text-lg font-semibold text-[#41423A] dark:text-white">
+                {training.title}
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">{training.description}</p>
+              <p className="text-xs mt-2 text-[#F8B133]">{training.date}</p>
+            </div>
           </motion.div>
         ))}
       </div>
+
+      {/* View All Trainings Link */}
+      <motion.div
+        className="mt-12"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.6 }}
+      >
+        <Link
+          href="/training"
+          className="inline-block bg-[#F8B133] hover:bg-[#F05A28] text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300"
+        >
+          View All Trainings
+        </Link>
+      </motion.div>
     </section>
   );
 }
 
+// ✅ Training data with description
 const trainings = [
   {
     title: "Mastering Keyframe Animation",
     date: "March 10, 2025",
-    image: "/about.png",
+    video: "/assets/project/Exercises/Exercise A-1.m4v",
+    description: "Understand keyframe techniques for precise animation control.",
   },
   {
     title: "Animating with Framer Motion",
     date: "March 15, 2025",
-    image: "/about.png",
+    video: "/assets/project/Exercises/Exercise B-1.m4v",
+    description: "Create fluid, interactive animations using Framer Motion.",
   },
   {
     title: "Advanced CSS Animations",
     date: "March 22, 2025",
-    image: "about.png",
+    video: "/assets/project/Exercises/Exercise C-1.m4v",
+    description: "Explore complex animation techniques using pure CSS.",
   },
 ];

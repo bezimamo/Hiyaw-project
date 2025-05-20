@@ -38,7 +38,7 @@ export function About() {
           viewport={{ once: true }}
           className="absolute top-10 left-10"
         >
-          <Image src="/hand-emoji.png" width={80} height={80} alt="Hand Emoji" />
+         
         </motion.div>
       </motion.div>
 

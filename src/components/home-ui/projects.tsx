@@ -1,19 +1,23 @@
 "use client";
+
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 
 export function Projects() {
-  const { theme } = useTheme();
+  const [isDark, setIsDark] = useState(false);
+
+  // Ensure we only check for theme on the client
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsDark(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    }
+  }, []);
 
   return (
-    <div
-      className={`relative min-h-screen transition-colors duration-300 ${
-        theme === "dark" ? "bg-[#41423A] text-white" : "bg-white text-[#41423A]"
-      }`}
-    >
+    <div className="relative min-h-screen bg-white text-[#41423A] dark:bg-[#41423A] dark:text-white transition-colors duration-300">
       {/* Background Grid Pattern */}
-      <div className="absolute inset-0 h-full w-full [background:radial-gradient(#F8B133_1px,transparent_1px)] [background-size:16px_16px] opacity-20 dark:opacity-30"></div>
+      <div className="absolute inset-0 h-full w-full [background:radial-gradient(#F8B133_1px,transparent_1px)] [background-size:16px_16px] opacity-20 dark:opacity-30 pointer-events-none"></div>
 
       {/* Header Section */}
       <motion.div
@@ -25,7 +29,7 @@ export function Projects() {
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-[#F8B133] to-[#F05A28]">
           Explore Our Animation Projects
         </h1>
-        <p className="mt-4 text-lg text-[#41423A] dark:text-gray-300">
+        <p className={`mt-4 text-lg ${isDark ? "text-gray-300" : "text-[#41423A]"}`}>
           Bringing creativity to life through breathtaking animations.
         </p>
       </motion.div>
@@ -48,7 +52,7 @@ export function Projects() {
             >
               {/* Project Media */}
               <motion.div
-                className="relative w-full md:w-1/2 rounded-lg shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                className="relative w-full md:w-1/2 rounded-lg shadow-xl overflow-hidden transition duration-300 hover:scale-105 hover:shadow-2xl"
                 whileHover={{ scale: 1.05 }}
               >
                 {isVideo ? (
@@ -79,7 +83,7 @@ export function Projects() {
                 transition={{ duration: 0.8 }}
               >
                 <h2 className="text-3xl font-bold text-[#F8B133]">{project.title}</h2>
-                <p className="text-lg text-[#41423A] dark:text-white">
+                <p className={`text-lg ${isDark ? "text-white" : "text-[#41423A]"}`}>
                   {project.type} • Animation
                 </p>
                 <Button
@@ -120,7 +124,7 @@ const projects = [
   },
   {
     title: "Astonishing Beki",
-    type: "3D Animation",
+    type: "2D Animation",
     image: "/assets/project/MotionGifs/sack.mp4",
   },
 ];
