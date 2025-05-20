@@ -51,11 +51,8 @@ export function Trainings() {
               muted
               playsInline
               className="w-full h-60 object-cover"
-            />
+            ></video>
             <div className="p-4">
-              <h3 className="text-lg font-semibold text-[#41423A] dark:text-white">
-                {training.title}
-              </h3>
               <p className="text-sm text-gray-600 dark:text-gray-300">{training.description}</p>
               <p className="text-xs mt-2 text-[#F8B133]">{training.date}</p>
             </div>
