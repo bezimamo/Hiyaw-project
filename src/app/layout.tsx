@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Zemenay",
+  title: "Hiyaw Animations",
   description: "A one stop shop for your tech needs",
 };
 
