@@ -24,6 +24,11 @@ export const Training = () => {
     '/assets/team/group1.jpg',
     '/assets/team/group2.jpg',
     '/assets/team/group3.jpg',
+    '/assets/team/group4.jpg',
+    '/assets/team/group5.jpg',
+
+
+
   ];
 
   return (
@@ -50,27 +55,33 @@ export const Training = () => {
           </a>
         </div>
 
-        {/* Right: Group Photo Carousel */}
-        <div className="w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
-          <Swiper
-            spaceBetween={20}
-            slidesPerView={1}
-            loop
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
-            modules={[Autoplay]}
-          >
-            {groupPhotos.map((src, idx) => (
-              <SwiperSlide key={idx}>
-                <img
-                  src={src}
-                  alt={`Group Photo ${idx + 1}`}
-                  className="w-full h-full object-cover rounded-xl"
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+       {/* Right: Group Photo Carousel */}
+       <div className="w-full rounded-xl overflow-hidden shadow-lg">
+  <Swiper
+    spaceBetween={20}
+    slidesPerView={1}
+    loop
+    autoplay={{ delay: 3000, disableOnInteraction: false }}
+    modules={[Autoplay]}
+    className="w-full"
+  >
+    {groupPhotos.map((src, idx) => (
+      <SwiperSlide key={idx}>
+        <div className="w-full flex justify-center items-center bg-white dark:bg-[#41423A]">
+        <img
+  src={src}
+  alt={`Group Photo ${idx + 1}`}
+  className="h-[90vh] w-full object-cover"
+/>
+
         </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
+
       </motion.section>
+
 
       {/* Why Learn Section */}
       <motion.section
