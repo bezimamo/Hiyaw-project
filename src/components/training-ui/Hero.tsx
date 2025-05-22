@@ -5,15 +5,16 @@ export const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-[#41423A]">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full z-0">
-        <Image
-          src="/assets/project/image3.jpg"
-          alt="2D Animation Background"
-          fill
-          priority
-          quality={90}
-          className="object-contain object-center"
-          sizes="100vw"
-        />
+      <Image
+  src="/assets/project/image3.jpg"
+  alt="2D Animation Background"
+  fill
+  priority
+  quality={90}
+  className="object-cover object-top"
+  sizes="100vw"
+/>
+
       </div>
 
       {/* Gradient Overlay */}

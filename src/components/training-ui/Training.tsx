@@ -35,52 +35,52 @@ export const Training = () => {
     <div className="bg-white dark:bg-[#41423A] text-[#41423A] dark:text-white transition-colors duration-300">
       {/* Intro Section */}
       <motion.section
-        className="min-h-screen px-6 py-24 grid md:grid-cols-2 gap-12 items-center"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+  className="min-h-screen py-24 px-6"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+>
+  <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+    {/* Left: Text */}
+    <div className="text-center md:text-left">
+      <h2 className="text-4xl font-bold mb-6">Professional 2D Animation Training</h2>
+      <p className="text-lg mb-8 max-w-md">
+        Learn animation from the ground up using real-world workflows. No prior experience required.
+      </p>
+      <a
+        href="/contact"
+        className="bg-[#F05A28] hover:bg-[#F8B133] text-white font-semibold py-3 px-6 rounded-full transition"
       >
-        {/* Left: Text */}
-        <div className="text-center md:text-left">
-          <h2 className="text-4xl font-bold mb-6">Professional 2D Animation Training</h2>
-          <p className="text-lg mb-8 max-w-md">
-            Learn animation from the ground up using real-world workflows. No prior experience required.
-          </p>
-          <a
-            href="/contact"
-            className="bg-[#F05A28] hover:bg-[#F8B133] text-white font-semibold py-3 px-6 rounded-full transition"
-          >
-            Contact Us
-          </a>
-        </div>
+        Contact Us
+      </a>
+    </div>
 
-       {/* Right: Group Photo Carousel */}
-       <div className="w-full rounded-xl overflow-hidden shadow-lg">
-  <Swiper
-    spaceBetween={20}
-    slidesPerView={1}
-    loop
-    autoplay={{ delay: 3000, disableOnInteraction: false }}
-    modules={[Autoplay]}
-    className="w-full"
-  >
-    {groupPhotos.map((src, idx) => (
-      <SwiperSlide key={idx}>
-        <div className="w-full flex justify-center items-center bg-white dark:bg-[#41423A]">
-        <img
-  src={src}
-  alt={`Group Photo ${idx + 1}`}
-  className="h-[90vh] w-full object-cover"
-/>
-
-        </div>
-      </SwiperSlide>
-    ))}
-  </Swiper>
-</div>
-
-      </motion.section>
+    {/* Right: Group Photo Carousel */}
+    <div className="w-full rounded-xl overflow-hidden shadow-lg">
+      <Swiper
+        spaceBetween={20}
+        slidesPerView={1}
+        loop
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        modules={[Autoplay]}
+        className="w-full"
+      >
+        {groupPhotos.map((src, idx) => (
+          <SwiperSlide key={idx}>
+            <div className="w-full flex justify-center items-center bg-white dark:bg-[#41423A]">
+              <img
+                src={src}
+                alt={`Group Photo ${idx + 1}`}
+                className="h-[90vh] w-full object-cover object-top"
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  </div>
+</motion.section>
 
 
       {/* Why Learn Section */}
