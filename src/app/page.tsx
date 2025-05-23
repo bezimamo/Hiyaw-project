@@ -5,7 +5,7 @@ import { Trainings } from '@/components/home-ui/trainings'
 
 export default function Home() {
   return (
-    <main className="bg-white dark:bg-[#41423A] text-[#41423A] dark:text-white">
+    <main className="pt-16"> {/* Add padding to account for fixed navbar */}
       <Hero />
       <About />
       <Projects />
