@@ -31,53 +31,77 @@ export default function ContactHero() {
       <section className="flex justify-center px-6 md:px-16 py-8 mb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
           {/* Form Card */}
-          <Card className="shadow-lg border-none bg-white dark:bg-[#41423A]">
-            <CardContent className="space-y-4 p-6 h-full">
-              <Input
-                placeholder="Your Name"
-                className="bg-white dark:bg-[#555547] text-[#41423A] dark:text-white border border-gray-300 dark:border-gray-600"
-              />
-              <Input
-                placeholder="Email Address"
-                className="bg-white dark:bg-[#555547] text-[#41423A] dark:text-white border border-gray-300 dark:border-gray-600"
-              />
-              <Textarea
-                placeholder="Your Message"
-                rows={5}
-                className="bg-white dark:bg-[#555547] text-[#41423A] dark:text-white border border-gray-300 dark:border-gray-600"
-              />
-              <Button className="bg-[#F05A28] hover:bg-[#F8B133] text-white w-full">
-                Send Message
-              </Button>
-            </CardContent>
-          </Card>
+         {/* Form Card */}
+<Card className="rounded-xl shadow-md bg-white dark:bg-white/10 border-none">
+  <CardContent className="p-6 space-y-4 h-full text-[#41423A] dark:text-white">
+   <Input
+  placeholder="Your Name"
+  className="
+    bg-white dark:bg-[#41423A] 
+    text-[#41423A] dark:text-white 
+    border border-gray-300 dark:border-[#5A5A47] 
+    placeholder-gray-400 dark:placeholder-gray-300
+    focus:outline-none focus:ring-2 focus:ring-[#F05A28] focus:border-[#F05A28]
+    transition
+  "
+/>
+<Input
+  placeholder="Email Address"
+  className="
+    bg-white dark:bg-[#41423A] 
+    text-[#41423A] dark:text-white 
+    border border-gray-300 dark:border-[#5A5A47] 
+    placeholder-gray-400 dark:placeholder-gray-300
+    focus:outline-none focus:ring-2 focus:ring-[#F05A28] focus:border-[#F05A28]
+    transition
+  "
+/>
+<Textarea
+  placeholder="Your Message"
+  rows={5}
+  className="
+    bg-white dark:bg-[#41423A] 
+    text-[#41423A] dark:text-white 
+    border border-gray-300 dark:border-[#5A5A47] 
+    placeholder-gray-400 dark:placeholder-gray-300
+    focus:outline-none focus:ring-2 focus:ring-[#F05A28] focus:border-[#F05A28]
+    transition
+  "
+/>
 
-          {/* Contact Info */}
-          <Card className="shadow-lg border-none bg-white dark:bg-[#41423A] h-full">
-            <CardContent className="p-6 flex flex-col justify-center space-y-6 h-full text-[#41423A] dark:text-white">
-              <div className="flex items-start gap-4">
-                <Phone className="text-[#F8B133] mt-1" />
-                <div>
-                  <h4 className="font-semibold">Phone</h4>
-                  <p>+251 911 234 567</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Mail className="text-[#F8B133] mt-1" />
-                <div>
-                  <h4 className="font-semibold">Email</h4>
-                  <p>hiyawanimation@gmail.com</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <MapPin className="text-[#F8B133] mt-1" />
-                <div>
-                  <h4 className="font-semibold">Location</h4>
-                  <p>Addis Ababa, Ethiopia</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+    <Button className="bg-[#F05A28] hover:bg-[#F8B133] text-white w-full">
+      Send Message
+    </Button>
+  </CardContent>
+</Card>
+
+{/* Contact Info Card */}
+<Card className="rounded-xl shadow-md bg-white dark:bg-white/10 border-none h-full">
+  <CardContent className="p-6 flex flex-col justify-center space-y-6 h-full text-[#41423A] dark:text-white">
+    <div className="flex items-start gap-4">
+      <Phone className="text-[#F8B133] mt-1" />
+      <div>
+        <h4 className="font-semibold">Phone</h4>
+        <p>+251 911 234 567</p>
+      </div>
+    </div>
+    <div className="flex items-start gap-4">
+      <Mail className="text-[#F8B133] mt-1" />
+      <div>
+        <h4 className="font-semibold">Email</h4>
+        <p>hiyawanimation@gmail.com</p>
+      </div>
+    </div>
+    <div className="flex items-start gap-4">
+      <MapPin className="text-[#F8B133] mt-1" />
+      <div>
+        <h4 className="font-semibold">Location</h4>
+        <p>Addis Ababa, Ethiopia</p>
+      </div>
+    </div>
+  </CardContent>
+</Card>
+
         </div>
       </section>
 
