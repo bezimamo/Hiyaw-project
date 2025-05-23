@@ -104,7 +104,7 @@ export function Projects({ showAll = false }: ProjectsProps) {
           <Link href="/project">
             <Button
               size="lg"
-              className="rounded-full bg-[#F05A28] hover:bg-[#F8B133] text-white transition duration-300 ease-in-out"
+              className="mb-16 rounded-full bg-[#F05A28] hover:bg-[#F8B133] text-white transition duration-300 ease-in-out"
             >
               See More Projects
             </Button>
