@@ -23,12 +23,12 @@ export default function ContactHero() {
 
       {/* Tagline */}
       <section className="text-center px-6 md:px-16 py-8 mt-12">
-        <h2 className="text-3xl font-bold mb-2 text-[#F05A28]">Get in Touch</h2>
-        <p className="text-lg mt-4">We&#39;d love to hear from you. Please fill out the form below or contact us directly.</p>
+        <h2 className="text-3xl font-bold mb-2 text-[#F05A28] mt-10">Get in Touch</h2>
+        <p className="text-lg mt-6">We&#39;d love to hear from you. Please fill out the form below or contact us directly.</p>
       </section>
 
       {/* Contact Form and Info */}
-      <section className="flex justify-center px-6 md:px-16 py-8">
+      <section className="flex justify-center px-6 md:px-16 py-8 mb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
           {/* Form Card */}
           <Card className="shadow-lg border-none bg-white dark:bg-[#41423A]">

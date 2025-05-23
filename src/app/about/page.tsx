@@ -6,7 +6,7 @@ import { TeamSection } from "@/components/about-ui/team-section"
 
 export default function About() {
   return (
-    <main className="pt-16"> {/* Add padding to account for fixed navbar */}
+    <main className="bg-white dark:bg-[#41423A] text-[#41423A] dark:text-white">
       <AboutHero/>
       <CompanyStory/>
       <CompanyInfo/>

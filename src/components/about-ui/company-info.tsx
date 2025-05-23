@@ -24,7 +24,7 @@ const infoBlocks = [
       "We aim to be the go-to partner for businesses leveraging technology for growth, leading global innovation and positive change.",
     image: "/assets/project/Storytelling/story6.jpg",
   },
-];
+] as const;
 
 export function CompanyInfo() {
   return (
@@ -52,10 +52,12 @@ export function CompanyInfo() {
           <h3 className="text-2xl font-bold text-[#F05A28]">{infoBlocks[0].title}</h3>
           <p className="text-[#41423A]/80 dark:text-white">{infoBlocks[0].description}</p>
           <p className="text-sm text-[#41423A]/70 dark:text-white">{infoBlocks[0].content}</p>
-          <Image src={infoBlocks[0].image} alt="Mission" width={300} height={200} className="rounded-lg shadow-lg" />
+          {infoBlocks[0].image && (
+            <Image src={infoBlocks[0].image} alt="Mission" width={300} height={200} className="rounded-lg shadow-lg" />
+          )}
         </motion.div>
 
-        {/* Middle - Our Values (Top Center, More Space) */}
+        {/* Middle - Our Values */}
         <motion.div 
           className="space-y-6 text-center relative -top-16" 
           initial={{ opacity: 0, y: -50 }} 
@@ -66,16 +68,16 @@ export function CompanyInfo() {
           <h3 className="text-2xl font-bold text-[#F05A28]">{infoBlocks[1].title}</h3>
           <p className="text-[#41423A]/80 dark:text-white">{infoBlocks[1].description}</p>
           <p className="text-sm text-[#41423A]/70 dark:text-white">{infoBlocks[1].content}</p>
-  <div className="w-[300px] h-[300px] rounded-full overflow-hidden mx-auto shadow-lg">
-    <video
-      src="/assets/project/MotionGifs/coffee.mov"
-      autoPlay
-      loop
-      muted
-      playsInline
-      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-    />
-  </div>
+          <div className="w-[300px] h-[300px] rounded-full overflow-hidden mx-auto shadow-lg">
+            <video
+              src="/assets/project/MotionGifs/coffee.mov"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+            />
+          </div>
         </motion.div>
 
         {/* Right - Our Vision */}
@@ -89,7 +91,9 @@ export function CompanyInfo() {
           <h3 className="text-2xl font-bold text-[#F05A28]">{infoBlocks[2].title}</h3>
           <p className="text-[#41423A]/80 dark:text-white">{infoBlocks[2].description}</p>
           <p className="text-sm text-[#41423A]/70 dark:text-white">{infoBlocks[2].content}</p>
-          <Image src={infoBlocks[2].image} alt="Vision" width={300} height={200} className="rounded-lg shadow-lg ml-10" />
+          {infoBlocks[2].image && (
+            <Image src={infoBlocks[2].image} alt="Vision" width={300} height={200} className="rounded-lg shadow-lg ml-10" />
+          )}
         </motion.div>
       </div>
     </section>
