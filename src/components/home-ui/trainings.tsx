@@ -1,15 +1,18 @@
 "use client";
+
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 
 export function Trainings() {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   return (
     <section
       className={`relative flex flex-col items-center justify-center min-h-screen px-6 md:px-16 lg:px-24 transition-all duration-300 ${
-        theme === "dark" ? "bg-[#41423A] text-white" : "bg-white text-[#41423A]"
+        resolvedTheme === "dark"
+          ? "bg-[#41423A] text-white"
+          : "bg-white text-[#41423A]"
       }`}
     >
       {/* Background Grid Pattern */}
@@ -53,7 +56,9 @@ export function Trainings() {
               className="w-full h-60 object-cover"
             ></video>
             <div className="p-4">
-              <p className="text-sm text-gray-600 dark:text-gray-300">{training.description}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                {training.description}
+              </p>
               <p className="text-xs mt-2 text-[#F8B133]">{training.date}</p>
             </div>
           </motion.div>
@@ -84,7 +89,8 @@ const trainings = [
     title: "Mastering Keyframe Animation",
     date: "March 10, 2025",
     video: "/assets/project/Exercises/Exercise A-1.m4v",
-    description: "Understand keyframe techniques for precise animation control.",
+    description:
+      "Understand keyframe techniques for precise animation control.",
   },
   {
     title: "Animating with Framer Motion",
