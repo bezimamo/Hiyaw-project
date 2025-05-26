@@ -61,15 +61,17 @@ export function Projects({ showAll = false }: ProjectsProps) {
                 whileHover={{ scale: 1.05 }}
               >
                 {isVideo ? (
-                  <video
-                    src={project.image}
-                    controls
-                    autoPlay
-                    loop
-                    muted
-                    className="w-full h-[400px] object-cover rounded-lg"
-                  />
-                ) : (
+ <video
+ src={project.image}
+ autoPlay
+ loop
+ playsInline
+ muted
+ className="w-full h-[400px] object-cover rounded-lg pointer-events-none"
+/>
+
+) : (
+
                   <motion.img
                     src={project.image}
                     alt={project.title}
