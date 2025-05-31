@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {
   PencilRuler, Sparkles, BookOpen,
-  PlayCircle, Send, Rocket, User, Video,
+  PlayCircle, Rocket, User, Video, Settings,
 } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
@@ -18,7 +18,7 @@ export const Training = () => {
     { icon: <Sparkles size={24} />, label: 'Expressive Motion' },
     { icon: <BookOpen size={24} />, label: 'Storyboarding' },
     { icon: <PlayCircle size={24} />, label: 'Digital Tools' },
-    { icon: <Send size={24} />, label: 'Publishing Skills' },
+    { icon: <Settings size={24} />, label: 'Rigged Animation' },
   ];
 
   const groupPhotos = [
@@ -164,7 +164,7 @@ export const Training = () => {
             Contact us to learn more or enroll in our upcoming sessions.
           </motion.p>
           <motion.a
-            href="https://forms.gle/your-google-form-id"
+            href="https://forms.gle/GYdR2Na4GhaAPAmeA"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#F05A28] hover:bg-[#F8B133] text-white font-semibold py-3 px-6 rounded-full shadow transition"
