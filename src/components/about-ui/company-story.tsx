@@ -10,7 +10,7 @@ export function CompanyStory() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="py-24 container mx-auto px-16 font-['Poppins'] dark:bg-[#41423A]">
+    <section className="py-24 container mx-auto px-6 font-['Poppins'] dark:bg-[#41423A]">
       <div className="flex flex-col md:flex-row items-center justify-between gap-16">
         
         {/* Left Side - Text Content */}
@@ -31,7 +31,7 @@ export function CompanyStory() {
               ></motion.span>
             </span> First
           </h2>
-          <p className="text-lg text-[#41423A] mb-8 leading-relaxed dark:text-white">
+          <p className="text-[18px] text-[#41423A] mb-8 leading-relaxed dark:text-white">
             At Hiyaw, we believe technology should empower people and make their lives easier. 
             Our mission is simple: to create solutions that prioritize people at every step.
           </p>

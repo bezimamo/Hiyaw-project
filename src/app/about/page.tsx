@@ -6,7 +6,7 @@ import { TeamSection } from "@/components/about-ui/team-section"
 
 export default function About() {
   return (
-    <main className="bg-white dark:bg-[#41423A] text-[#41423A] dark:text-white">
+    <main className="bg-white dark:bg-[#41423A] text-[#41423A] dark:text-white pt-16">
       <AboutHero/>
       <CompanyStory/>
       <CompanyInfo/>

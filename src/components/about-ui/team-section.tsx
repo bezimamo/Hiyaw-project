@@ -68,7 +68,7 @@ const teamMembers = [
 
 export function TeamSection() {
   return (
-    <section className="flex flex-col items-center py-10 px-16 container mx-auto font-['Poppins'] dark:bg-[#41423A]">
+    <section className="flex flex-col items-center py-10 px-6 container mx-auto font-['Poppins'] dark:bg-[#41423A]">
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
         <h2 className="text-4xl font-bold text-center mb-12 text-[#F05A28]">Meet Our Team</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -76,7 +76,11 @@ export function TeamSection() {
             <Card key={index} className="flex flex-col bg-white shadow-lg rounded-2xl border border-[#F05A28]/30 h-full">
               <CardHeader className="flex flex-col items-center text-center">
                 <Avatar className="w-24 h-24 mb-4">
-                  <AvatarImage src={member.image} alt={member.name} />
+                <AvatarImage
+                 src={member.image}
+                 alt={member.name}
+                 className="w-full h-full object-cover" 
+/>
                   <AvatarFallback>{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                 </Avatar>
                 <CardTitle className="text-[#F05A28] text-lg font-semibold">{member.name}</CardTitle>
