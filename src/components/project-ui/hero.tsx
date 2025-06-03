@@ -17,7 +17,7 @@ export default function ProjectsHero() {
         <h1 className="text-5xl font-bold text-[#F05A28] mb-4 leading-tight">
           Our Stories in Motion
         </h1>
-        <p className="text-lg mb-6 text-white">
+        <p className="text-[20px] mb-6 text-white">
           Explore animations and projects that celebrate culture, spark ideas,
           and redefine storytelling through dynamic visuals and creative design.
         </p>
