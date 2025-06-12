@@ -83,13 +83,13 @@ export function TeamSection() {
 />
                   <AvatarFallback>{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                 </Avatar>
-                <CardTitle className="text-[#F05A28] text-lg font-semibold">{member.name}</CardTitle>
-                <CardDescription className="text-[#41423A]/80 text-sm">{member.role}</CardDescription>
+                <CardTitle className="text-[#F05A28] text-[22px] font-semibold">{member.name}</CardTitle>
+                <CardDescription className="text-[#41423A]/80 text-[18px]">{member.role}</CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col text-center justify-between px-4">
                 <div className="relative bg-[#F05A28]/10 text-[#41423A] rounded-lg p-4 mb-4 text-sm">
                   <FaQuoteLeft className="absolute top-2 left-2 text-[#F05A28] opacity-70" />
-                  <p className="ml-6">{member.background}</p>
+                  <p className="ml-6 text-[18px]">{member.background}</p>
                 </div>
                 <div className="flex justify-center space-x-4 text-[#F05A28] text-lg">
                   <a href={member.social.instagram} target="_blank" rel="noopener noreferrer">

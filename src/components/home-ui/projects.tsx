@@ -89,8 +89,8 @@ export function Projects({ showAll = false }: ProjectsProps) {
                 transition={{ duration: 0.8 }}
               >
                 <h2 className="text-3xl font-bold text-[#F8B133]">{project.title}</h2>
-                <p className="text-md font-semibold text-[#F05A28]">{project.type} • Animation</p>
-                <p className="text-base text-[#41423A] dark:text-white">
+                <p className="text-[20px] font-semibold text-[#F05A28]">{project.type} • Animation</p>
+                <p className="text-[18px] text-[#41423A] dark:text-white">
   {project.description}
 </p>
 

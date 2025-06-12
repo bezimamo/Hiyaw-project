@@ -109,7 +109,7 @@ export default function ContactHero() {
       <section className="px-6 md:px-16 pb-16">
         <iframe
           src="https://maps.google.com/maps?q=Addis%20Ababa&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          className="w-full h-64 rounded-lg border-none"
+          className="w-full h-[350px] rounded-lg border-none"
           loading="lazy"
         ></iframe>
       </section>

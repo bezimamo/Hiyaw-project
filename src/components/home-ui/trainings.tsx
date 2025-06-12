@@ -28,7 +28,7 @@ export function Trainings() {
       </motion.h2>
 
       <motion.p
-        className="mb-12 max-w-2xl text-center text-gray-700 dark:text-gray-300"
+        className="mb-12 max-w-2xl text-[20px] text-center text-gray-700 dark:text-gray-300"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
@@ -56,10 +56,10 @@ export function Trainings() {
               className="w-full h-60 object-cover"
             ></video>
             <div className="p-4">
-              <p className="text-sm text-gray-600 dark:text-gray-300">
+              <p className=" text-[18px] text-gray-600 dark:text-gray-300">
                 {training.description}
               </p>
-              <p className="text-xs mt-2 text-[#F8B133]">{training.date}</p>
+              <p className=" mt-2 text-[18px] text-[#F8B133]">{training.date}</p>
             </div>
           </motion.div>
         ))}

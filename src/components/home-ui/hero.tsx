@@ -50,7 +50,7 @@ export function Hero() {
           Elevate Your Story with Animation
         </h1>
 
-        <p className="max-w-[600px] mx-auto mt-6 md:text-xl text-[#41423A] dark:text-white">
+        <p className="max-w-[600px] mx-auto mt-6 text-[20px] text-[#41423A] dark:text-white">
           Learn industry-standard 2D animation skills and bring your ideas to life through our expert-led training program.
         </p>
 
