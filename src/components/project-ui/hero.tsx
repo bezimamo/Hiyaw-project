@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function ProjectsHero() {
   return (
     <section
-      className="flex flex-col md:flex-row items-center justify-between w-full h-screen font-['Poppins']"
+      className="flex flex-col md:flex-row items-center justify-between w-full h-screen bg-[#f8f8f8]  dark:bg-[#41423A] font-['Poppins']"
       style={{
         backgroundImage: "url('/assets/project/muba in his natural habitat.png')",
         backgroundSize: "cover",

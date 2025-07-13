@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-[#41423A]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#f8f8f8]  dark:bg-[#41423A]">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full z-0">
         <Image

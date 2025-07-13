@@ -7,7 +7,7 @@ import { FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 
 export default function ContactHero() {
   return (
-    <div className="relative bg-white dark:bg-[#41423A] text-[#41423A] dark:text-white min-h-screen">
+    <div className="relative bg-[#f8f8f8]  dark:bg-[#41423A] text-[#41423A] dark:text-white min-h-screen">
       {/* Vertical Sidebar for Social Icons */}
       <aside className="hidden lg:flex fixed top-1/3 left-4 flex-col gap-4 z-50">
         <a href="https://www.instagram.com/hiyaw_animation/" target="_blank" rel="noopener noreferrer">
@@ -32,7 +32,7 @@ export default function ContactHero() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
           {/* Form Card */}
          {/* Form Card */}
-<Card className="rounded-xl shadow-md bg-white dark:bg-white/10 border-none">
+<Card className="rounded-xl shadow-md bg-[#f8f8f8]  dark:bg-white/10 border-none">
   <CardContent className="p-6 space-y-4 h-full text-[#41423A] dark:text-white">
    <Input
   placeholder="Your Name"
@@ -82,7 +82,9 @@ export default function ContactHero() {
       <Phone className="text-[#F8B133] mt-1" />
       <div>
         <h4 className="font-semibold">Phone</h4>
-        <p>+251 911 234 567</p>
+        <p>0948421997</p>
+        <p> 0922863402</p>
+
       </div>
     </div>
     <div className="flex items-start gap-4">

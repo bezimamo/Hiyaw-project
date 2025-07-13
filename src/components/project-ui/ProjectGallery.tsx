@@ -7,7 +7,7 @@ type ProjectGroup = {
   description: string;
   image: string;
   details: string;
-  category: "Storytelling" | "MotionGifs" | "AgingFaces" | "Exercises";
+  category: "Storytelling" | "MotionGifs" | "caricature" | "Exercises";
 };
 
 
@@ -19,10 +19,10 @@ const projects: ProjectGroup[] = [
     {
   title: "Roots of Grace",
   description: "A young face bearing timeless tradition.",
-  image: "/assets/project/AgingFaces/img1.jpg",
+ image: "/assets/project/caricature/img1.jpg",
   details:
     "Adorned with a delicate forehead cross and flowing traditional hair, this 10-year-old girl embodies the elegance and spiritual depth of ancient Ethiopian womanhood. A symbol of identity passed through generations.",
-  category: "AgingFaces",
+  category: "caricature",
 }
 , 
 {
@@ -60,10 +60,10 @@ const projects: ProjectGroup[] = [
    {
   title: "Hope in His Eyes",
   description: "A smile that carries dreams and ambition.",
-  image: "/assets/project/AgingFaces/img2.jpg",
+   image: "/assets/project/caricature/img2.jpg",
   details:
     "This piece captures the radiant energy of a 20-year-old man, full of life, optimism, and readiness to embrace the future.",
-  category: "AgingFaces",
+  category: "caricature",
 }
 ,
  {
@@ -104,10 +104,10 @@ const projects: ProjectGroup[] = [
  {
   title: "Lines of Labor",
   description: "A weathered face carved by decades of work.",
-  image: "/assets/project/AgingFaces/img3.jpg",
+  image: "/assets/project/caricature/img3.jpg",
   details:
     "His expression tells stories of sacrifice and survival — a life of resilience, shaped by years of physical and emotional endurance.",
-  category: "AgingFaces",
+  category: "caricature",
 },
     {
     title: "Whispers of the River",
@@ -183,14 +183,14 @@ const projects: ProjectGroup[] = [
   category: "Storytelling",
 },
 
-   {
-  title: "Silver Years",
-  description: "Grace, wisdom, and the calm of a long journey.",
-  image: "/assets/project/AgingFaces/img4.jpg",
-  details:
-    "Crowned with white hair, this portrait honors the legacy of age — a lifetime of memories reflected in gentle eyes and quiet strength.",
-  category: "AgingFaces",
-}
+  {
+    title: "Silver Years",
+    description: "Grace, wisdom, and the calm of a long journey.",
+    image: "/assets/project/caricature/img4.jpg",
+    details:
+      "Crowned with white hair, this portrait honors the legacy of age — a lifetime of memories reflected in gentle eyes and quiet strength.",
+    category: "caricature",
+  },
 ,
     {
     title: "Whispers of the River",
@@ -215,7 +215,7 @@ const ProjectGallery: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectGroup | null>(null);
   const [visibleCount, setVisibleCount] = useState(3);
   const [activeCategory, setActiveCategory] = useState<
-    "All" | "Storytelling" | "AgingFaces" | "MotionGifs" | "Exercises"
+    "All" | "Storytelling" | "caricature" | "MotionGifs" | "Exercises"
   >("All");
 
   const openModal = (project: ProjectGroup) => setSelectedProject(project);
@@ -229,15 +229,15 @@ const ProjectGallery: React.FC = () => {
   );
 
   return (
-    <section className="bg-white dark:bg-[#41423A] py-16 px-4">
+    <section className=" bg-[#f8f8f8]  dark:bg-[#41423A] py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-[#41423A] dark:text-white text-center mb-10">
-          Featured Projects
+           featured student projects 
         </h2>
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
-          {["All", "Storytelling", "MotionGifs", "caricature", "Exercises"].map((cat) => (
+          {["Storytelling", "MotionGifs", "caricature", "Exercises", "All" ].map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat as typeof activeCategory)}
