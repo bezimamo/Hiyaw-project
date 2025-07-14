@@ -20,7 +20,7 @@ export function Hero() {
   return (
     <div
       className={`relative w-full h-screen overflow-hidden flex items-center justify-center transition-colors duration-500 ${
-        isDark ? "bg-[#41423A]" : "bg-[#FFFFFF]"
+        isDark ? "bg-[#41423A]" : "bg-neutral-50"
       }`}
     >
       {/* Background Video */}

@@ -21,7 +21,7 @@ export function Projects({ showAll = false }: ProjectsProps) {
   const displayedProjects = showAll ? projects : projects.slice(0, 2);
 
   return (
-    <div className="relative min-h-screen bg-white text-[#41423A] dark:bg-[#41423A] dark:text-white transition-colors duration-300">
+    <div className="relative min-h-screen bg-neutral-50 text-[#41423A] dark:bg-[#41423A] dark:text-white transition-colors duration-300">
       {/* Background Grid */}
       <div className="absolute inset-0 h-full w-full [background:radial-gradient(#F8B133_1px,transparent_1px)] [background-size:16px_16px] opacity-20 dark:opacity-30 pointer-events-none" />
 

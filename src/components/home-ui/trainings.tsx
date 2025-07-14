@@ -12,7 +12,7 @@ export function Trainings() {
       className={`relative flex flex-col items-center justify-center min-h-screen px-6 md:px-16 lg:px-24 transition-all duration-300 ${
         resolvedTheme === "dark"
           ? "bg-[#41423A] text-white"
-          : "bg-white text-[#41423A]"
+          : "bg-neutral-50 text-[#41423A]"
       }`}
     >
       {/* Background Grid Pattern */}

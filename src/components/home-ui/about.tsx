@@ -6,7 +6,8 @@ import Link from "next/link";
 
 export function About() {
   return (
-    <section className="relative overflow-x-hidden flex flex-col md:flex-row items-center justify-between min-h-screen px-6 md:px-16 lg:px-24 bg-white dark:bg-[#41423A] transition-all duration-300">
+    <section className="relative overflow-x-hidden flex flex-col md:flex-row items-center justify-between min-h-screen px-6 md:px-16 lg:px-24 bg-neutral-50 dark:bg-[#41423A]
+ transition-all duration-300">
       {/* Image Section */}
       <motion.div
         initial={{ x: -100, opacity: 0 }}

@@ -30,7 +30,7 @@ export const Training = () => {
   ];
 
   return (
-    <div className="bg-white dark:bg-[#41423A] text-[#41423A] dark:text-white transition-colors duration-300">
+    <div className="bg-neutral-50 dark:bg-[#41423A] text-[#41423A] dark:text-white transition-colors duration-300">
       {/* Intro Section */}
       <motion.section
         className="min-h-screen py-24 px-6"
