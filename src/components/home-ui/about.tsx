@@ -6,8 +6,7 @@ import Link from "next/link";
 
 export function About() {
   return (
-    <section className="relative overflow-x-hidden flex flex-col md:flex-row items-center justify-between min-h-screen px-6 md:px-16 lg:px-24 bg-neutral-50 dark:bg-[#41423A]
- transition-all duration-300">
+    <section className="relative overflow-x-hidden flex flex-col md:flex-row items-center justify-between min-h-screen px-6 md:px-16 lg:px-24 bg-[#f8f8f8]  dark:bg-[#41423A] transition-all duration-300">
       {/* Image Section */}
       <motion.div
         initial={{ x: -100, opacity: 0 }}
@@ -44,7 +43,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-bold text-[#F05A28]"
+          className="text-3xl md:text-5xl font-hiyaw text-[#F05A28]"
         >
           About Hiyaw
         </motion.h2>

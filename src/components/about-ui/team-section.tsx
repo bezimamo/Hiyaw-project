@@ -68,24 +68,28 @@ const teamMembers = [
 
 export function TeamSection() {
   return (
-    <section className="flex flex-col items-center py-10 px-16 container mx-auto font-['Poppins'] dark:bg-[#41423A]">
+    <section className="flex flex-col items-center py-10 px-6 font-['Poppins'] bg-[#f8f8f8]  dark:bg-[#41423A]">
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
-        <h2 className="text-4xl font-bold text-center mb-12 text-[#F05A28]">Meet Our Team</h2>
+        <h2 className="text-4xl font-hiyaw text-center mb-12 text-[#F05A28]">Meet Our Team</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
             <Card key={index} className="flex flex-col bg-white shadow-lg rounded-2xl border border-[#F05A28]/30 h-full">
               <CardHeader className="flex flex-col items-center text-center">
                 <Avatar className="w-24 h-24 mb-4">
-                  <AvatarImage src={member.image} alt={member.name} />
+                <AvatarImage
+                 src={member.image}
+                 alt={member.name}
+                 className="w-full h-full object-cover" 
+/>
                   <AvatarFallback>{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                 </Avatar>
-                <CardTitle className="text-[#F05A28] text-lg font-semibold">{member.name}</CardTitle>
-                <CardDescription className="text-[#41423A]/80 text-sm">{member.role}</CardDescription>
+                <CardTitle className="text-[#F05A28] text-[22px] font-semibold">{member.name}</CardTitle>
+                <CardDescription className="text-[#41423A]/80 text-[18px]">{member.role}</CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col text-center justify-between px-4">
                 <div className="relative bg-[#F05A28]/10 text-[#41423A] rounded-lg p-4 mb-4 text-sm">
                   <FaQuoteLeft className="absolute top-2 left-2 text-[#F05A28] opacity-70" />
-                  <p className="ml-6">{member.background}</p>
+                  <p className="ml-6 text-[18px]">{member.background}</p>
                 </div>
                 <div className="flex justify-center space-x-4 text-[#F05A28] text-lg">
                   <a href={member.social.instagram} target="_blank" rel="noopener noreferrer">

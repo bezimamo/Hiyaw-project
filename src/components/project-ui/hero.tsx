@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function ProjectsHero() {
   return (
     <section
-      className="flex flex-col md:flex-row items-center justify-between w-full h-screen font-['Poppins']"
+      className="flex flex-col md:flex-row items-center justify-between w-full h-screen bg-[#f8f8f8]  dark:bg-[#41423A] font-['Poppins']"
       style={{
         backgroundImage: "url('/assets/project/muba in his natural habitat.png')",
         backgroundSize: "cover",
@@ -14,10 +14,10 @@ export default function ProjectsHero() {
     >
       {/* Text Content */}
       <div className="md:w-1/2 text-left px-8 md:px-16">
-        <h1 className="text-5xl font-bold text-[#F05A28] mb-4 leading-tight">
+        <h1 className="text-5xl font-hiyaw text-[#F05A28] mb-4 leading-tight">
           Our Stories in Motion
         </h1>
-        <p className="text-lg mb-6 text-white">
+        <p className="text-[20px] mb-6 text-white">
           Explore animations and projects that celebrate culture, spark ideas,
           and redefine storytelling through dynamic visuals and creative design.
         </p>

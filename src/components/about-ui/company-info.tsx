@@ -28,10 +28,10 @@ const infoBlocks = [
 
 export function CompanyInfo() {
   return (
-    <section className="py-24 container mx-auto px-10 text-[#41423A] font-['Poppins'] dark:bg-[#41423A]">
+    <section className="py-24 w-full bg-[#f8f8f8] px-6 md:px-16 text-[#41423A] font-['Poppins'] dark:bg-[#41423A]">
       {/* Section Title */}
       <motion.h2 
-        className="text-4xl font-bold text-center mb-16 dark:text-white"
+        className="text-4xl font-hiyaw text-center mb-16 dark:text-white"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -49,9 +49,9 @@ export function CompanyInfo() {
           transition={{ duration: 1 }}
           whileHover={{ scale: 1.05 }}
         >
-          <h3 className="text-2xl font-bold text-[#F05A28]">{infoBlocks[0].title}</h3>
-          <p className="text-[#41423A]/80 dark:text-white">{infoBlocks[0].description}</p>
-          <p className="text-sm text-[#41423A]/70 dark:text-white">{infoBlocks[0].content}</p>
+          <h3 className="text-2xl font-hiyaw text-[#F05A28]">{infoBlocks[0].title}</h3>
+          <p className="text-[20px] text-[#41423A]/80 dark:text-white">{infoBlocks[0].description}</p>
+          <p className="text-[18px] text-[#41423A]/70 dark:text-white">{infoBlocks[0].content}</p>
           {infoBlocks[0].image && (
             <Image src={infoBlocks[0].image} alt="Mission" width={300} height={200} className="rounded-lg shadow-lg" />
           )}
@@ -65,9 +65,9 @@ export function CompanyInfo() {
           transition={{ duration: 1 }}
           whileHover={{ scale: 1.05 }}
         >
-          <h3 className="text-2xl font-bold text-[#F05A28]">{infoBlocks[1].title}</h3>
-          <p className="text-[#41423A]/80 dark:text-white">{infoBlocks[1].description}</p>
-          <p className="text-sm text-[#41423A]/70 dark:text-white">{infoBlocks[1].content}</p>
+          <h3 className="text-2xl font-hiyaw text-[#F05A28]">{infoBlocks[1].title}</h3>
+          <p className="text-[20px] text-[#41423A]/80 dark:text-white">{infoBlocks[1].description}</p>
+          <p className=" text-[18px] text-[#41423A]/70 dark:text-white">{infoBlocks[1].content}</p>
           <div className="w-[300px] h-[300px] rounded-full overflow-hidden mx-auto shadow-lg">
             <video
               src="/assets/project/MotionGifs/coffee.mov"
@@ -88,9 +88,9 @@ export function CompanyInfo() {
           transition={{ duration: 1 }}
           whileHover={{ scale: 1.05 }}
         >
-          <h3 className="text-2xl font-bold text-[#F05A28]">{infoBlocks[2].title}</h3>
-          <p className="text-[#41423A]/80 dark:text-white">{infoBlocks[2].description}</p>
-          <p className="text-sm text-[#41423A]/70 dark:text-white">{infoBlocks[2].content}</p>
+          <h3 className="text-2xl font-hiyaw text-[#F05A28]">{infoBlocks[2].title}</h3>
+          <p className="text-[20px] text-[#41423A]/80 dark:text-white">{infoBlocks[2].description}</p>
+          <p className="text-[18px] text-[#41423A]/70 dark:text-white">{infoBlocks[2].content}</p>
           {infoBlocks[2].image && (
             <Image src={infoBlocks[2].image} alt="Vision" width={300} height={200} className="rounded-lg shadow-lg ml-10" />
           )}

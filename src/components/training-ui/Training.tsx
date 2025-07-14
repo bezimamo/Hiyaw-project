@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {
   PencilRuler, Sparkles, BookOpen,
-  PlayCircle, Send, Rocket, User, Video,
+  PlayCircle, Rocket, User, Video, Settings,
 } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
@@ -18,7 +18,7 @@ export const Training = () => {
     { icon: <Sparkles size={24} />, label: 'Expressive Motion' },
     { icon: <BookOpen size={24} />, label: 'Storyboarding' },
     { icon: <PlayCircle size={24} />, label: 'Digital Tools' },
-    { icon: <Send size={24} />, label: 'Publishing Skills' },
+    { icon: <Settings size={24} />, label: 'Rigged Animation' },
   ];
 
   const groupPhotos = [
@@ -30,7 +30,7 @@ export const Training = () => {
   ];
 
   return (
-    <div className="bg-neutral-50 dark:bg-[#41423A] text-[#41423A] dark:text-white transition-colors duration-300">
+    <div className="bg-[#f8f8f8]  dark:bg-[#41423A] text-[#41423A] dark:text-white transition-colors duration-300">
       {/* Intro Section */}
       <motion.section
         className="min-h-screen py-24 px-6"
@@ -42,7 +42,7 @@ export const Training = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Left: Text */}
           <div className="text-center md:text-left">
-            <h2 className="text-4xl font-bold mb-6">Professional 2D Animation Training</h2>
+            <h2 className="text-4xl font-hiyaw mb-6">Professional 2D Animation Training</h2>
             <p className="text-lg mb-8 max-w-md">
               Learn animation from the ground up using real-world workflows. No prior experience required.
             </p>
@@ -121,7 +121,7 @@ export const Training = () => {
         viewport={{ once: true }}
       >
         <div className="max-w-6xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Key Skills You’ll Gain</h2>
+          <h2 className="text-4xl font-hiyaw mb-4">Key Skills You’ll Gain</h2>
           <p className="text-lg max-w-2xl mx-auto">
             Gain a complete foundation in 2D animation and storytelling.
           </p>
@@ -146,7 +146,7 @@ export const Training = () => {
         {/* Get Started */}
         <div className="text-center">
           <motion.h3
-            className="text-3xl font-bold mb-4"
+            className="text-3xl font-hiyaw mb-4"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
@@ -164,7 +164,7 @@ export const Training = () => {
             Contact us to learn more or enroll in our upcoming sessions.
           </motion.p>
           <motion.a
-            href="https://forms.gle/your-google-form-id"
+            href="https://forms.gle/GYdR2Na4GhaAPAmeA"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#F05A28] hover:bg-[#F8B133] text-white font-semibold py-3 px-6 rounded-full shadow transition"

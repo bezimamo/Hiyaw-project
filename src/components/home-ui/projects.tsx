@@ -21,7 +21,7 @@ export function Projects({ showAll = false }: ProjectsProps) {
   const displayedProjects = showAll ? projects : projects.slice(0, 2);
 
   return (
-    <div className="relative min-h-screen bg-neutral-50 text-[#41423A] dark:bg-[#41423A] dark:text-white transition-colors duration-300">
+    <div className="relative min-h-screen bg-[#f8f8f8]  text-[#41423A] dark:bg-[#41423A] dark:text-white transition-colors duration-300">
       {/* Background Grid */}
       <div className="absolute inset-0 h-full w-full [background:radial-gradient(#F8B133_1px,transparent_1px)] [background-size:16px_16px] opacity-20 dark:opacity-30 pointer-events-none" />
 
@@ -32,12 +32,13 @@ export function Projects({ showAll = false }: ProjectsProps) {
         transition={{ duration: 0.8 }}
         className="text-center py-16"
       >
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-[#F8B133] to-[#F05A28]">
+        <h1 className="text-4xl font-hiyaw tracking-tighter sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-[#F8B133] to-[#F05A28]">
           Explore Our Animation Projects
         </h1>
-        <p className={`mt-4 text-lg ${isDark ? "text-white" : "text-[#41423A]"}`}>
-          Bringing creativity to life through breathtaking animations.
-        </p>
+        <p className="mt-4 text-lg text-[#41423A] dark:text-white">
+  Bringing creativity to life through breathtaking animations.
+</p>
+
       </motion.div>
 
       {/* Projects */}
@@ -88,9 +89,9 @@ export function Projects({ showAll = false }: ProjectsProps) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <h2 className="text-3xl font-bold text-[#F8B133]">{project.title}</h2>
-                <p className="text-md font-semibold text-[#F05A28]">{project.type} • Animation</p>
-                <p className="text-base text-[#41423A] dark:text-white">
+                <h2 className="text-3xl font-hiyaw text-[#F8B133]">{project.title}</h2>
+                <p className="text-[20px] font-semibold text-[#F05A28]">{project.type} • Animation</p>
+                <p className="text-[18px] text-[#41423A] dark:text-white">
   {project.description}
 </p>
 

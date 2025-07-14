@@ -20,7 +20,7 @@ export function Hero() {
   return (
     <div
       className={`relative w-full h-screen overflow-hidden flex items-center justify-center transition-colors duration-500 ${
-        isDark ? "bg-[#41423A]" : "bg-neutral-50"
+        isDark ? "bg-[#41423A]" : "bg-[#f8f8f8]"
       }`}
     >
       {/* Background Video */}
@@ -46,11 +46,11 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-20 text-center px-6 max-w-2xl animate-fade-in">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-[#F8B133] to-[#F05A28]">
+        <h1 className="text-4xl font-hiyaw tracking-tighter sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-[#F8B133] to-[#F05A28]">
           Elevate Your Story with Animation
         </h1>
 
-        <p className="max-w-[600px] mx-auto mt-6 md:text-xl text-[#41423A] dark:text-white">
+        <p className="max-w-[600px] mx-auto mt-6 text-[20px] text-[#41423A] dark:text-white">
           Learn industry-standard 2D animation skills and bring your ideas to life through our expert-led training program.
         </p>
 

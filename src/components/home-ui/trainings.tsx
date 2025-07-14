@@ -12,14 +12,14 @@ export function Trainings() {
       className={`relative flex flex-col items-center justify-center min-h-screen px-6 md:px-16 lg:px-24 transition-all duration-300 ${
         resolvedTheme === "dark"
           ? "bg-[#41423A] text-white"
-          : "bg-neutral-50 text-[#41423A]"
+          : "bg-[#f8f8f8]  text-[#41423A]"
       }`}
     >
       {/* Background Grid Pattern */}
       <div className="absolute inset-0 h-full w-full [background:radial-gradient(#F8B133_1px,transparent_1px)] [background-size:16px_16px] opacity-20 dark:opacity-30 pointer-events-none"></div>
 
       <motion.h2
-        className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#F8B133] to-[#F05A28]"
+        className="text-4xl font-hiyaw mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#F8B133] to-[#F05A28]"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -28,7 +28,7 @@ export function Trainings() {
       </motion.h2>
 
       <motion.p
-        className="mb-12 max-w-2xl text-center text-gray-700 dark:text-gray-300"
+        className="mb-12 max-w-2xl text-[20px] text-center text-gray-700 dark:text-gray-300"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
@@ -56,10 +56,10 @@ export function Trainings() {
               className="w-full h-60 object-cover"
             ></video>
             <div className="p-4">
-              <p className="text-sm text-gray-600 dark:text-gray-300">
+              <p className=" text-[18px] text-gray-600 dark:text-gray-300">
                 {training.description}
               </p>
-              <p className="text-xs mt-2 text-[#F8B133]">{training.date}</p>
+              <p className=" mt-2 text-[18px] text-[#F8B133]">{training.date}</p>
             </div>
           </motion.div>
         ))}
