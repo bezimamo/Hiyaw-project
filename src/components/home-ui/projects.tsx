@@ -122,19 +122,14 @@ const projects = [
   {
     title: "Buna Time",
     type: "2D Animation",
-    image: "/assets/project/MotionGifs/coffee.mov",
+    image: "/assets/project/MotionGifs/last .mp4",
     description: "A stylized animation of Ethiopian coffee preparation, showcasing squash and stretch principles for bouncy motion and character."
   },
   {
     title: "Squash and Stretch",
     type: "2D Animation",
-    image: "/assets/project/MotionGifs/squash_and_strech.mp4",
+    image: "/assets/project/MotionGifs/Nose Test 7.mov",
     description: "This animation demonstrates the core principle of squash and stretch through an expressive bouncing character design."
   },
-  {
-    title: "Fish Animation",
-    type: "2D Animation",
-    image: "/assets/project/MotionGifs/fish.mp4",
-    description: "A whimsical looping animation of a swimming fish, highlighting fluid motion and underwater dynamics."
-  },
+
 ];
