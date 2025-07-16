@@ -11,7 +11,7 @@ import {
 
 export function AboutHero() {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between py-16 px-6 md:px-16 container mx-auto font-['Poppins'] bg-[#f8f8f8]  dark:bg-[#41423A]">
+    <section className="flex flex-col md:flex-row items-center justify-between py-16 px-6 md:px-16 font-['Poppins'] bg-[#f8f8f8]  dark:bg-[#41423A]">
       {/* Left Side - Text Content */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
@@ -24,7 +24,7 @@ export function AboutHero() {
           What Sets Us Apart
         </h4>
         <h1
-          className="text-[#F05A28] font-bold mt-4"
+          className="text-[#F05A28] font-hiyaw mt-4"
           style={{ fontSize: '48px', lineHeight: '52px' }}
         >
           Reimagining creativity through culture, purpose, and passion.

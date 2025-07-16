@@ -42,7 +42,7 @@ export const Training = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Left: Text */}
           <div className="text-center md:text-left">
-            <h2 className="text-4xl font-bold mb-6">Professional 2D Animation Training</h2>
+            <h2 className="text-4xl font-hiyaw mb-6">Professional 2D Animation Training</h2>
             <p className="text-lg mb-8 max-w-md">
               Learn animation from the ground up using real-world workflows. No prior experience required.
             </p>
@@ -121,7 +121,7 @@ export const Training = () => {
         viewport={{ once: true }}
       >
         <div className="max-w-6xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Key Skills You’ll Gain</h2>
+          <h2 className="text-4xl font-hiyaw mb-4">Key Skills You’ll Gain</h2>
           <p className="text-lg max-w-2xl mx-auto">
             Gain a complete foundation in 2D animation and storytelling.
           </p>
@@ -146,7 +146,7 @@ export const Training = () => {
         {/* Get Started */}
         <div className="text-center">
           <motion.h3
-            className="text-3xl font-bold mb-4"
+            className="text-3xl font-hiyaw mb-4"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}

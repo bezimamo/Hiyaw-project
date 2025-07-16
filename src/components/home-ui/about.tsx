@@ -43,7 +43,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-bold text-[#F05A28]"
+          className="text-3xl md:text-5xl font-hiyaw text-[#F05A28]"
         >
           About Hiyaw
         </motion.h2>

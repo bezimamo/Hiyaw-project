@@ -14,7 +14,7 @@ export default function ProjectsHero() {
     >
       {/* Text Content */}
       <div className="md:w-1/2 text-left px-8 md:px-16">
-        <h1 className="text-5xl font-bold text-[#F05A28] mb-4 leading-tight">
+        <h1 className="text-5xl font-hiyaw text-[#F05A28] mb-4 leading-tight">
           Our Stories in Motion
         </h1>
         <p className="text-[20px] mb-6 text-white">

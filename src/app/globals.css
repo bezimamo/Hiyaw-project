@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'HIYAW';
-  src: url('/fonts/HIYAW.ttf') format('truetype');
+  font-family: 'Blocky';
+  src: url('/fonts/Blocky-nRx8M.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

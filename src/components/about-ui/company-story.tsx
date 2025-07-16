@@ -10,7 +10,7 @@ export function CompanyStory() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="py-24 container mx-auto px-6 font-['Poppins'] bg-[#f8f8f8] dark:bg-[#41423A]">
+    <section className="py-24 px-6 font-['Poppins'] bg-[#f8f8f8] dark:bg-[#41423A]">
       <div className="flex flex-col md:flex-row items-center justify-between gap-16">
         
         {/* Left Side - Text Content */}
@@ -20,7 +20,7 @@ export function CompanyStory() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-4xl font-bold text-[#41423A] mb-6 leading-tight dark:text-white">
+          <h2 className="text-4xl font-hiyaw text-[#41423A] mb-6 leading-tight dark:text-white">
             We Put <span className="relative">
               People
               <motion.span 

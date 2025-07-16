@@ -23,7 +23,7 @@ export const Hero = () => {
 
       {/* Content */}
       <div className="relative z-20 text-center px-4 max-w-6xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#F8B133] mb-6 animate-fade-in-up">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-hiyaw text-[#F8B133] mb-6 animate-fade-in-up">
           Master <span className="text-white">2D Animation</span>
         </h1>
         <p className="text-white text-lg sm:text-xl max-w-2xl mx-auto mb-8 animate-fade-in-up delay-100">

@@ -266,7 +266,7 @@ const ProjectGallery: React.FC = () => {
     <section className=" bg-[#f8f8f8]  dark:bg-[#41423A] py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-[#41423A] dark:text-white text-center mb-10">
-          featured student projects
+           featured student projects 
         </h2>
 
         <div className="flex flex-wrap justify-center gap-4 mb-10">
