@@ -41,6 +41,15 @@ const projects: ProjectGroup[] = [
     "This visual breakdown presents a full turn-around of a character in five seamless steps — capturing style, posture, and personality in motion. It celebrates the artistry behind character development and form.",
   category: "Storytelling",
 },
+{
+    title: "Stride of Glory",
+    description: "A motion tribute to Ethiopia’s legendary runners.",
+    image: "",
+    details:
+      "This motion piece highlights the unwavering spirit of Ethiopian athletes, known for their endurance and determination. With each stride, the runner embodies discipline, national pride, and the legacy of champions who have carried Ethiopia’s flag across finish lines around the world.",
+    category: "MotionGifs",
+  },
+    
   {
     title: "Voices of the Forgotten",
     description: "An emotional 2D short exploring mental health stigma in Ethiopia.",
@@ -48,15 +57,14 @@ const projects: ProjectGroup[] = [
     details: "This animation gives voice to those silently battling mental health issues...",
     category: "Storytelling",
   },
-  {
-  title: "Slip, Fall, Rise",
-  description: "A playful loop of Sack's unexpected tumble and recovery.",
-  image: "/assets/project/MotionGifs/sack.mp4",
-  details:
-    "Sack leaps from a height only to hilariously slip on a banana and crash to the ground — but in true animated spirit, he dusts himself off and stands tall. A short, fun reminder that falling is part of the story.",
-  category: "MotionGifs",
-},
-  
+   {
+    title: "Lemon Toss of Love",
+    description: "A playful tradition of affection during baptism ceremonies in Ethiopia.",
+    image: "/assets/project/MotionGifs/last .mp4",
+    details:
+      "    During Timket, Ethiopia's Epiphany celebration, it's common for young men to toss lemons at women they admire — a lighthearted gesture symbolizing interest and admiration. If the girl catches or accepts the lemon, it is seen as a mutual sign of affection. This motion piece captures that joyful, symbolic moment, blending tradition with youthful romance ",
+    category: "MotionGifs",
+ },
    {
   title: "Hope in His Eyes",
   description: "A smile that carries dreams and ambition.",
@@ -66,6 +74,16 @@ const projects: ProjectGroup[] = [
   category: "caricature",
 }
 ,
+
+  {
+  title: "Slip, Fall, Rise",
+  description: "A playful loop of Sack's unexpected tumble and recovery.",
+  image: "/assets/project/MotionGifs/sack.mp4",
+  details:
+    "Sack leaps from a height only to hilariously slip on a banana and crash to the ground — but in true animated spirit, he dusts himself off and stands tall. A short, fun reminder that falling is part of the story.",
+  category: "MotionGifs",
+},
+  
  {
   title: "The Clay Drum – Part 1",
   description: "A bounty hunter, a child, and the price of recklessness.",
@@ -182,7 +200,15 @@ const projects: ProjectGroup[] = [
     "After witnessing the loss of his parents to monstrous creatures, Kut vows to protect the innocent. His path to power leads him to a hidden glade where he encounters a mystical Pegasus—challenging his view of good and evil. With loyal friends and a newfound purpose, Kut joins a military force to battle the darkness and unveil the origin of its terror.",
   category: "Storytelling",
 },
-
+ {
+    title: "Whispers of the River",
+    description: "A poetic tale of nature and spiritual balance.",
+    image: "/assets/project/MotionGifs/Nose Test 7.mov",
+    details:
+      "This animation reflects the harmony between community and the natural world.",
+    category: "MotionGifs",
+ },
+ 
   {
     title: "Silver Years",
     description: "Grace, wisdom, and the calm of a long journey.",
@@ -191,7 +217,7 @@ const projects: ProjectGroup[] = [
       "Crowned with white hair, this portrait honors the legacy of age — a lifetime of memories reflected in gentle eyes and quiet strength.",
     category: "caricature",
   },
-,
+
     {
     title: "Whispers of the River",
     description: "A poetic tale of nature and spiritual balance.",
@@ -210,7 +236,6 @@ const projects: ProjectGroup[] = [
   },
     
 ];
-
 const ProjectGallery: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectGroup | null>(null);
   const [visibleCount, setVisibleCount] = useState(3);
@@ -228,16 +253,24 @@ const ProjectGallery: React.FC = () => {
     (p) => activeCategory === "All" || p.category === activeCategory
   );
 
+  const getProjectMedia = (project: ProjectGroup) => {
+    if (project.title === "Stride of Glory") {
+      return document.documentElement.classList.contains("dark")
+        ? "/assets/project/MotionGifs/run dark mode.mov"
+        : "/assets/project/MotionGifs/Run cycle2.mov";
+    }
+    return project.image;
+  };
+
   return (
     <section className=" bg-[#f8f8f8]  dark:bg-[#41423A] py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-[#41423A] dark:text-white text-center mb-10">
-           featured student projects 
+          featured student projects
         </h2>
 
-        {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
-          {["Storytelling", "MotionGifs", "caricature", "Exercises", "All" ].map((cat) => (
+          {["Storytelling", "MotionGifs", "caricature", "Exercises", "All"].map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat as typeof activeCategory)}
@@ -252,7 +285,6 @@ const ProjectGallery: React.FC = () => {
           ))}
         </div>
 
-        {/* Project Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {filteredProjects.slice(0, visibleCount).map((project, index) => (
             <div
@@ -260,16 +292,20 @@ const ProjectGallery: React.FC = () => {
               className="relative group rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer"
               onClick={() => openModal(project)}
             >
-              {isVideo(project.image) ? (
+              {isVideo(getProjectMedia(project)) ? (
                 <video
-                  src={project.image}
-                  controls
-                  className="w-full h-64 object-cover"
-                  style={{ width: "100%", height: "256px" }}
-                />
+  src={getProjectMedia(project)}
+  controls
+  className={`w-full h-64 object-cover ${
+    project.title === "Lemon Toss of Love" ? "object-top" : "object-[center_80%]"
+  }`}
+  style={{ width: "100%", height: "256px" }}
+/>
+
+                
               ) : (
                 <Image
-                  src={project.image}
+                  src={getProjectMedia(project)}
                   alt={project.title}
                   width={400}
                   height={256}
@@ -285,7 +321,6 @@ const ProjectGallery: React.FC = () => {
           ))}
         </div>
 
-        {/* Load More Button */}
         {visibleCount < filteredProjects.length && (
           <div className="mt-10 text-center">
             <button
@@ -298,44 +333,42 @@ const ProjectGallery: React.FC = () => {
         )}
       </div>
 
-      {/* Modal */}
-     {selectedProject && (
-  <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 px-4 overflow-y-auto">
-    <div className="bg-white dark:bg-[#2D2E28] rounded-lg max-w-3xl w-full p-6 relative max-h-[90vh] overflow-y-auto">
-      <button
-        onClick={closeModal}
-        className="absolute top-4 right-4 text-black dark:text-white text-2xl font-bold"
-      >
-        &times;
-      </button>
+      {selectedProject && (
+        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 px-4 overflow-y-auto">
+          <div className="bg-white dark:bg-[#2D2E28] rounded-lg max-w-3xl w-full p-6 relative max-h-[90vh] overflow-y-auto">
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 text-black dark:text-white text-2xl font-bold"
+            >
+              &times;
+            </button>
 
-      <h3 className="text-2xl font-bold mb-4 text-[#41423A] dark:text-white">
-        {selectedProject.title}
-      </h3>
+            <h3 className="text-2xl font-bold mb-4 text-[#41423A] dark:text-white">
+              {selectedProject.title}
+            </h3>
 
-      <div className="mb-4">
-        {isVideo(selectedProject.image) ? (
-          <video
-            src={selectedProject.image}
-            controls
-            className="max-h-[60vh] w-full object-contain rounded-lg"
-          />
-        ) : (
-          <Image
-            src={selectedProject.image}
-            alt={selectedProject.title}
-            width={800}
-            height={600}
-            className="max-h-[60vh] w-full object-contain rounded-lg"
-          />
-        )}
-      </div>
+            <div className="mb-4">
+              {isVideo(getProjectMedia(selectedProject)) ? (
+                <video
+                  src={getProjectMedia(selectedProject)}
+                  controls
+                  className="max-h-[60vh] w-full object-contain rounded-lg"
+                />
+              ) : (
+                <Image
+                  src={getProjectMedia(selectedProject)}
+                  alt={selectedProject.title}
+                  width={800}
+                  height={600}
+                  className="max-h-[60vh] w-full object-contain rounded-lg"
+                />
+              )}
+            </div>
 
-      <p className="text-gray-800 dark:text-gray-200">{selectedProject.details}</p>
-    </div>
-  </div>
-)}
-
+            <p className="text-gray-800 dark:text-gray-200">{selectedProject.details}</p>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
