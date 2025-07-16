@@ -58,11 +58,11 @@ const projects: ProjectGroup[] = [
     category: "Storytelling",
   },
    {
-    title: "Lemon Toss of Love",
-    description: "A playful tradition of affection during baptism ceremonies in Ethiopia.",
+    title: "Timket Toss",
+    description: "A playful tradition during Timket where admiration is tossed with a lemon.",
     image: "/assets/project/MotionGifs/last .mp4",
     details:
-      "    During Timket, Ethiopia's Epiphany celebration, it's common for young men to toss lemons at women they admire — a lighthearted gesture symbolizing interest and admiration. If the girl catches or accepts the lemon, it is seen as a mutual sign of affection. This motion piece captures that joyful, symbolic moment, blending tradition with youthful romance ",
+      "   Set during Timket, Ethiopia’s Epiphany celebration, this motion piece captures a joyful tradition  ",
     category: "MotionGifs",
  },
    {
@@ -200,15 +200,16 @@ const projects: ProjectGroup[] = [
     "After witnessing the loss of his parents to monstrous creatures, Kut vows to protect the innocent. His path to power leads him to a hidden glade where he encounters a mystical Pegasus—challenging his view of good and evil. With loyal friends and a newfound purpose, Kut joins a military force to battle the darkness and unveil the origin of its terror.",
   category: "Storytelling",
 },
- {
-    title: "Whispers of the River",
-    description: "A poetic tale of nature and spiritual balance.",
-    image: "/assets/project/MotionGifs/Nose Test 7.mov",
-    details:
-      "This animation reflects the harmony between community and the natural world.",
-    category: "MotionGifs",
- },
- 
+{
+  title: "Popel Jim",
+  description: "Client work for a children’s nursery rhyme about not throwing away your boogers but using a napkin.",
+  image: "/assets/project/MotionGifs/Nose Test 7.mov",
+  details:
+    "This lighthearted motion piece brings to life the quirky character of Popel Jim — a playful boy who learns a gentle hygiene lesson. Through a catchy rhyme and comical animation, it teaches children the importance of using a napkin rather than tossing their boogers around. Designed for young audiences, the animation combines humor with educational value, delivering a fun yet memorable message about cleanliness and manners.",
+  category: "MotionGifs",
+}
+,
+
   {
     title: "Silver Years",
     description: "Grace, wisdom, and the calm of a long journey.",
