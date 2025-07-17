@@ -10,7 +10,6 @@ type ProjectGroup = {
   category: "Storytelling" | "MotionGifs" | "caricature" | "Exercises";
 };
 
-
 const isVideo = (filename: string) =>
   filename.endsWith(".mp4") || filename.endsWith(".gif") || filename.endsWith(".mov") || filename.endsWith(".m4v");
 
@@ -41,15 +40,7 @@ const projects: ProjectGroup[] = [
     "This visual breakdown presents a full turn-around of a character in five seamless steps — capturing style, posture, and personality in motion. It celebrates the artistry behind character development and form.",
   category: "Storytelling",
 },
-{
-    title: "Stride of Glory",
-    description: "A motion tribute to Ethiopia’s legendary runners.",
-    image: "",
-    details:
-      "This motion piece highlights the unwavering spirit of Ethiopian athletes, known for their endurance and determination. With each stride, the runner embodies discipline, national pride, and the legacy of champions who have carried Ethiopia’s flag across finish lines around the world.",
-    category: "MotionGifs",
-  },
-    
+
   {
     title: "Voices of the Forgotten",
     description: "An emotional 2D short exploring mental health stigma in Ethiopia.",
@@ -209,8 +200,7 @@ const projects: ProjectGroup[] = [
   category: "MotionGifs",
 }
 ,
-
-  {
+{
     title: "Silver Years",
     description: "Grace, wisdom, and the calm of a long journey.",
     image: "/assets/project/caricature/img4.jpg",
