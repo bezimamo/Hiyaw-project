@@ -92,8 +92,15 @@ export function CompanyInfo() {
           <p className="text-[20px] text-[#41423A]/80 dark:text-white">{infoBlocks[2].description}</p>
           <p className="text-[18px] text-[#41423A]/70 dark:text-white">{infoBlocks[2].content}</p>
           {infoBlocks[2].image && (
-            <Image src={infoBlocks[2].image} alt="Vision" width={300} height={200} className="rounded-lg shadow-lg ml-10" />
-          )}
+  <Image
+    src={infoBlocks[2].image}
+    alt="Vision"
+    width={300}
+    height={200}
+    className="w-[300px] h-[200px] object-cover rounded-lg shadow-lg"
+  />
+)}
+
         </motion.div>
       </div>
     </section>

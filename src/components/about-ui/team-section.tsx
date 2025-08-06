@@ -75,14 +75,24 @@ export function TeamSection() {
           {teamMembers.map((member, index) => (
             <Card key={index} className="flex flex-col bg-white shadow-lg rounded-2xl border border-[#F05A28]/30 h-full">
               <CardHeader className="flex flex-col items-center text-center">
-                <Avatar className="w-24 h-24 mb-4">
-                <AvatarImage
-                 src={member.image}
-                 alt={member.name}
-                 className="w-full h-full object-cover" 
-/>
-                  <AvatarFallback>{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-                </Avatar>
+              <Avatar className="w-24 h-24 mb-4">
+  <AvatarImage
+    src={member.image}
+    alt={member.name}
+    className={`w-full h-full object-cover ${
+      member.name === "Bereket Getachew" || member.name === "Fikir Samuel"
+        ? "object-[10%_center]"
+        : member.name === "Yishak Abrham"
+        ? "object-[center_0%]"  // ⬅️ shift Yishak’s image downward
+        : "object-center"
+    }`}
+  />
+  <AvatarFallback>
+    {member.name.split(" ").map((n) => n[0]).join("")}
+  </AvatarFallback>
+</Avatar>
+
+
                 <CardTitle className="text-[#F05A28] text-[22px] font-semibold">{member.name}</CardTitle>
                 <CardDescription className="text-[#41423A]/80 text-[18px]">{member.role}</CardDescription>
               </CardHeader>
